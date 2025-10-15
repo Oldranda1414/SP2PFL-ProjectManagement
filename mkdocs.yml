@@ -1,6 +1,6 @@
-site_name: Super Chasm Hunter
+site_name: Secure Peer2Peer Federated Learning
 strict: true
-repo_url: https://github.com/FilippoGurioli/super-chasm-hunter-pm
+repo_url: https://github.com/Oldranda1414/SP2PFL-ProjectManagement
 theme:
   name: material
   # favicon: assets/logo.svg
