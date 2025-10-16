@@ -20,3 +20,4 @@ An interest has peaked into an article exploring a Distributed Federated Learnin
 With the goal of creating a propriatary Framework to easily execute this algorithm with companies and organizations as peers (as in OpenML's clients) the project 'Tyr Framework' was conceived.
 
 The name 'Tyr' comes from the Norse god of war, justice, and law. The name seemed fitting the framework allows 'enemies' as in competitors who work in similar fields, to collaborate on a common goal without disclosing valuable data.
+
