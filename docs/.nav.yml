@@ -1,0 +1,7 @@
+nav:
+  - Home: index.md
+  - Scoping: scoping.md
+  - Planning: planning.md
+  - Launching: launching.md
+  - Monitoring: monitoring.md
+  - Closing: closing.md

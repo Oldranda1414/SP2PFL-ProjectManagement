@@ -1,6 +1,6 @@
-site_name: Secure Peer2Peer Federated Learning
+site_name: Tyr Framework - PM
 strict: true
-repo_url: https://github.com/Oldranda1414/SP2PFL-ProjectManagement
+repo_url: https://github.com/Oldranda1414/tyr_framework-ProjectManagement
 theme:
   name: material
   # favicon: assets/logo.svg
