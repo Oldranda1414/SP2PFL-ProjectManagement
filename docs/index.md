@@ -2,6 +2,9 @@
 
 The following is the documentation for the project 'Tyr Framework' at 'OpenML'
 
+**Studente:** Leonardo Randacio
+**Email:** leonardo.randacio@studio.unibo.it
+
 ## OpenML
 
 OpenML is a Software House specialized in cutting edge Machine Learning applications.
