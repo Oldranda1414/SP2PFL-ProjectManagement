@@ -1,5 +1,3 @@
-# Tyr Documentation
-
 The following is the documentation for the project 'Tyr Framework' at 'OpenML'
 
 **Studente:** Leonardo Randacio
