@@ -40,10 +40,35 @@ To aid in the meetings' execution a template is used to keep track of the progre
 
 ## Conditions of Satisfaction
 
-1. Some
-    1. sub some
-1. someelse
-    1. sub someelse
+In the creation of the CoS document, particular enphasis on the security aspects is put as it is a key feature of the Tyr Framework.
+
+1. Quantitative
+    1. Core
+        1. Model convergence time to be less than 2x of the centralized baseline
+        1. Maximum supported peers in a single federation to be more than 25 organizations
+        1. Model to converge to baseline accuracy within less than 5x epochs, respect to the number of epochs of the baseline
+    1. Security
+        1. Zero raw data transmission between peers
+        1. Implemented model encryption and secure aggregation protocols
+        1. Multi-factor authentication and cryptographic identity verification for all peers
+        1. Zero data leakage verified via privacy audit and attack simulation.
+    1. Technical
+        1. Client onboarding time less than 4 hours for technical team
+        1. 100% of API endpoints to be documented
+1. Qualitative
+    1. Security
+        1. Formal privacy guarantees demonstrated and documented by the research team.
+        1. Comprehensive logging of all federation activities accessible to all participants
+        1. Clear visibility into aggregation processes without revealing private data
+        1. Framework design approved by regional legal counsels for data protection regulations
+    1. User Experience
+        1. Streamlined process for new organizations to join federations
+        1. Intuitive interface for managing multiple federated models
+        1. Real-time visibility into training progress and federation health
+        1. Comprehensive guides for technical teams and business stakeholders
+    1. Business Value
+        1. Framework capabilities demonstrably superior to existing open-source solutions
+        1. Clear path to monetization through SaaS model
 
 ## Requirement Breakdown Structure
 
