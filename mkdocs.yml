@@ -3,7 +3,7 @@ strict: true
 repo_url: https://github.com/Oldranda1414/tyr_framework-ProjectManagement
 theme:
   name: material
-  language: it
+  language: en
   icon:
     repo: material/github
 

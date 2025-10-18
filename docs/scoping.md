@@ -1,9 +1,3 @@
-!!! note "Page Contents"
-    *   [Meeting Purpose](#meeting-purpose)
-    *   [Expected Deliverables](#expected-deliverables)
-    *   [Meeting Details](#meeting-details)
-    *   [Participants](#participants)
-
 Given the project's initial informal proposal, it is clearly a 'Product Development Project' (in contrast to the more common 'Client Delivery Project'). This type of project is similar to the main product sold by OpenML to it's customers so the company is adept to it's quirks.
 
 ## Project Scoping Meetings
@@ -16,10 +10,10 @@ The expected deliverables expected to be produced at the end of the meetings are
 
 - List of Conditions of Satisfaction (CoS)
 - Requirement Breakdown Structure (RBS)
-- Project Overview Statement (POS)
 - Choice of PMLC Model to adopt
+- Project Overview Statement (POS)
 
-### Meeting Detail
+### Meetings Details
 
 Given the high man/hour cost of meetings, two possible approaches are considered to minimize time investment:
 
@@ -44,11 +38,20 @@ Given the scope of work (pun intended) to be undertaken during the meetings an i
 
 To aid in the meetings' execution a template is used to keep track of the progress.
 
+## Conditions of Satisfaction
+
+1. Some
+    1. sub some
+1. someelse
+    1. sub someelse
+
+## Requirement Breakdown Structure
+
 ## PMLC Model Choice
 
-OpenML has is no stranger to Agile developing frameworks and managing projects centered on cutting edge technology. Still the project manager recognizes the advantages of traditional project management life cycles.
+OpenML is no stranger to Agile developing frameworks and managing projects centered on cutting edge technology. Still, the project manager recognizes the advantages of traditional project management life cycles.
 
-The two possible main approaches considered are Agile and Traditional(Waterfall).
+The two main approaches considered are Agile and Traditional (Waterfall).
 
 The Tyr Framework project has many characteristics to consider when choosing the PMLC model:
 
@@ -69,3 +72,6 @@ The Tyr Framework project has many characteristics to consider when choosing the
         - Higher chance of client unsatisfaction or product's market failure.
 
 Given the pros and cons considered, a hybrid approach is choosen (iterative) TODO refine this
+
+## Project Overview Statement
+
