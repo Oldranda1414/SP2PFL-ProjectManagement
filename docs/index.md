@@ -11,6 +11,8 @@ The company is one year old, but has already established itself as a big player 
 
 The company's main and only product is a successfull SAAS ML Framework API that allows users to easily train various types of models.
 
+The company is still young and even though it is highly-valued, it's personel count is still under 50 people.
+
 Although when founded the company proved to be a rising star, since a year has passed OpenML is looking into expanding it's product lineup into a new direction.
 
 ## Tyr Framework
