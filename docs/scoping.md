@@ -9,7 +9,7 @@ Given the nature of the project there are no clients to involve in the Scoping M
 The expected deliverables expected to be produced at the end of the meetings are:
 
 - List of Conditions of Satisfaction (CoS)
-- Requirement Breakdown Structure (RBS)
+- Requirements Definition
 - Choice of PMLC Model to adopt
 - Project Overview Statement (POS)
 
@@ -36,7 +36,25 @@ The Project Manager (PM) will also serve as moderator/facilitator during the mee
 
 Given the scope of work (pun intended) to be undertaken during the meetings an initial scheduling of 3 meetings is set, with the possibility of arranging more meetings if necessary.
 
-To aid in the meetings' execution a template is used to keep track of the progress.
+### Meeting Agenda Template
+
+To aid in the meetings' execution an agenda is used to keep track of the progress.
+
+The following template is used to create the meeting agenda, removing items already completed in previous meetings when necessary.
+
+- Recap of previous meeting
+
+- Introduction of current agenda
+- Introduction to the project's inception
+- Introduction to project's goal/idea
+- Discussion of Conditions of Satisfaction (CoS)
+- Production of CoS document
+- Discussion of Requirements
+- Production of Requirements Definition document
+- Choice of PMLC Model
+- Draft Project Overview Statement
+
+- Adjurn to next meeting
 
 ## Conditions of Satisfaction
 
@@ -70,7 +88,7 @@ In the creation of the CoS document, particular enphasis on the security aspects
         1. Framework capabilities demonstrably superior to existing open-source solutions
         1. Clear path to monetization through SaaS model
 
-## Requirement Breakdown Structure
+## Requirements Definition
 
 ## PMLC Model Choice
 
