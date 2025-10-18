@@ -3,9 +3,7 @@ strict: true
 repo_url: https://github.com/Oldranda1414/tyr_framework-ProjectManagement
 theme:
   name: material
-  # favicon: assets/logo.svg
   language: it
-  # logo: assets/logo.svg
   icon:
     repo: material/github
 
@@ -34,9 +32,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
-# extra_css:
-#   - assets/extra.css
 
 plugins:
   - search

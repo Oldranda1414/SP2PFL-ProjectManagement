@@ -1,3 +1,9 @@
+!!! note "Page Contents"
+    *   [Meeting Purpose](#meeting-purpose)
+    *   [Expected Deliverables](#expected-deliverables)
+    *   [Meeting Details](#meeting-details)
+    *   [Participants](#participants)
+
 Given the project's initial informal proposal, it is clearly a 'Product Development Project' (in contrast to the more common 'Client Delivery Project'). This type of project is similar to the main product sold by OpenML to it's customers so the company is adept to it's quirks.
 
 ## Project Scoping Meetings
