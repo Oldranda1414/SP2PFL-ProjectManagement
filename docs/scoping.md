@@ -114,7 +114,7 @@ For these reasons the User Stories apprach is chosen to represent project Requir
 To organizer User Stories into a hierarchical structure the following concepts are used:
 
 ```mermaid
-flowchart TD
+flowchart LR
     Initiative-- has -->Capability
     Capability-- has -->Feature
     Feature-- is implemented by -->Story
