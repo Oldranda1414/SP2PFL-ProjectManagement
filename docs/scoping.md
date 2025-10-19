@@ -90,6 +90,36 @@ In the creation of the CoS document, particular enphasis on the security aspects
 
 ## Requirements Definition
 
+Two ways of expressing requirements are considered:
+
+- Requirements Breakdown Structure (RBS)
+- User Stories
+
+RBS has many advantages over User Stories:
+
+- Usually more formal and less subject to misunderstanding
+- Being a more traditional approach it is better documented and partecipants might be more use to them
+- Understandable hierarchical structure
+
+Most of the strenghts of RBS are considered to be less apparent when the partecipants are entirely internal to OpenML:
+
+- Being an 'internal project' the risk (as in the product of the probability and recovery cost) of misunderstandings is lower
+- The team is used to using User Stories as many members, as the company itself, are young and adept to modern approaches
+- A hierarchical structure can be imposed with little effort to User Stories too
+
+For these reasons the User Stories apprach is chosen to represent project Requirements
+
+### User Stories
+
+To organizer User Stories into a hierarchical structure the following concepts are used:
+
+```mermaid
+flowchart TD
+    Initiative-- has -->Capability
+    Capability-- has -->Feature
+    Feature-- is implemented by -->Story
+```
+
 ## PMLC Model Choice
 
 OpenML is no stranger to Agile developing frameworks and managing projects centered on cutting edge technology. Still, the project manager recognizes the advantages of traditional project management life cycles.
