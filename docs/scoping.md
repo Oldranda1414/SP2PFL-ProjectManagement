@@ -120,47 +120,51 @@ flowchart LR
     Feature-- is implemented by many -->Story
 ```
 
-#### 1. Client Onboarding
+#### 1. Client Onboarding and Support
 
 ##### 1.1 Documentation
 
 ###### 1.1.1 Offer Catalog
 
-An Offer Catalog documenting the subscription plans and billing details should be available to interested parties.
-
 ###### 1.1.2 Installation Documentation
 
-Installation Documentation should be publicly available to interested parties.
-
 ###### 1.1.3 Framework Documentation
-
-Updated documentation on the Framework's usage and API should be publicly available.
 
 ##### 1.2 Installation
 
 ###### 1.2.1 Installation Process
 
-###### 1.2.2 Subscription ChecK
+###### 1.2.2 Subscription Check
 
 ##### 1.3 Help Desk
 
-##### 1.3.1 Onboarding Technical Support
+###### 1.3.1 Onboarding Technical Support
 
-##### 1.3.2 Installation Technical Support
+###### 1.3.2 Installation Technical Support
 
-##### 1.3.3 Framework Technical Support
+###### 1.3.3 Framework Technical Support
 
 #### 2. Model Definition
 
-User's should be able to define the model they want to train using Tyr Framework.
+##### 2.1 Model Input
+
+##### 2.2 Model Layers
+
+##### 2.3 Model Output
 
 #### 3. Federated Learning (Framework Usage)
 
-User's should be able to use the Framework to setup and execute training epochs in a Federated Learning environment.
+##### 3.1 Federation Members
+
+##### 3.2 Comunication Protocol
+
+##### 3.3 Model Training
 
 #### 4. Model Usage
 
-User's should be able to use the trained model in inference.
+##### 4.1 Model Storage
+
+##### 4.2 Model Inference
 
 ## PMLC Model Choice
 
