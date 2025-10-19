@@ -122,25 +122,21 @@ flowchart LR
 
 #### 1. Client Onboarding
 
-Interested clients should easily find out about the Tyr Framework and it's capabilities and be guided through a streamlined onboarding process.
-
 ##### 1.1 Documentation
-
-Complete, up to date and understandable documentation on the onboarding process should be publicly available to users and interested clients.
 
 ###### 1.1.1 Offer Catalog
 
-An Offer Catalog documenting the subscription plans and billing details available should be available to interested parties.
+An Offer Catalog documenting the subscription plans and billing details should be available to interested parties.
 
 ###### 1.1.2 Installation Documentation
 
-Installation Documentation should be publicly available to interested parties allowing
+Installation Documentation should be publicly available to interested parties.
 
 ###### 1.1.3 Framework Documentation
 
-##### 1.2 Installation
+Updated documentation on the Framework's usage and API should be publicly available.
 
-A user friendly installation process should be implemented.
+##### 1.2 Installation
 
 ###### 1.2.1 Installation Process
 
@@ -148,7 +144,11 @@ A user friendly installation process should be implemented.
 
 ##### 1.3 Help Desk
 
-A help desk composed by technicians should be available for clients.
+##### 1.3.1 Onboarding Technical Support
+
+##### 1.3.2 Installation Technical Support
+
+##### 1.3.3 Framework Technical Support
 
 #### 2. Model Definition
 
@@ -190,3 +190,28 @@ Given the pros and cons considered, a hybrid approach is choosen (iterative) TOD
 
 ## Project Overview Statement
 
+### Opportunity
+
+### Goal
+
+### Objectives
+
+### Success Criteria
+
+### A/R/O
+
+#### Assuptions
+
+#### Risks
+
+#### Obstacles
+
+### SWAT Analysis
+
+#### Strenghts
+
+#### Weaknesses
+
+#### Opportunities
+
+#### Threats
