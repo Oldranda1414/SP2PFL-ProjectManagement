@@ -115,10 +115,52 @@ To organizer User Stories into a hierarchical structure the following concepts a
 
 ```mermaid
 flowchart LR
-    Initiative-- has -->Capability
-    Capability-- has -->Feature
-    Feature-- is implemented by -->Story
+    Initiative-- has many -->Capability
+    Capability-- has many -->Feature
+    Feature-- is implemented by many -->Story
 ```
+
+#### 1. Client Onboarding
+
+Interested clients should easily find out about the Tyr Framework and it's capabilities and be guided through a streamlined onboarding process.
+
+##### 1.1 Documentation
+
+Complete, up to date and understandable documentation on the onboarding process should be publicly available to users and interested clients.
+
+###### 1.1.1 Offer Catalog
+
+An Offer Catalog documenting the subscription plans and billing details available should be available to interested parties.
+
+###### 1.1.2 Installation Documentation
+
+Installation Documentation should be publicly available to interested parties allowing
+
+###### 1.1.3 Framework Documentation
+
+##### 1.2 Installation
+
+A user friendly installation process should be implemented.
+
+###### 1.2.1 Installation Process
+
+###### 1.2.2 Subscription ChecK
+
+##### 1.3 Help Desk
+
+A help desk composed by technicians should be available for clients.
+
+#### 2. Model Definition
+
+User's should be able to define the model they want to train using Tyr Framework.
+
+#### 3. Federated Learning (Framework Usage)
+
+User's should be able to use the Framework to setup and execute training epochs in a Federated Learning environment.
+
+#### 4. Model Usage
+
+User's should be able to use the trained model in inference.
 
 ## PMLC Model Choice
 
