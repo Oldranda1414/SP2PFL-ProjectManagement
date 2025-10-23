@@ -126,23 +126,71 @@ flowchart LR
 
 ###### 1.1.1 Offer Catalog
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.1.1.1 | As a potential client | I want to browse a catalog of available Tyr Framework offers | So I can understand which subscription plan best fits my organization’s needs |
+| 1.1.1.2 | As a sales representative | I want to update and manage the offer catalog content | So that clients always see up-to-date pricing and feature information |
+| 1.1.1.3 | As a product manager | I want to track which offers receive the most interest | So that I can refine future pricing and feature bundles |
+
 ###### 1.1.2 Installation Documentation
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.1.2.1 | As a new client developer | I want clear step-by-step installation guides | So that I can deploy the Tyr Framework quickly and without external help |
+| 1.1.2.2 | As a DevOps engineer | I want configuration examples for different environments | So that I can integrate the framework into our existing infrastructure |
+| 1.1.2.3 | As a support engineer | I want standardized installation documentation | So that I can easily help clients troubleshoot setup issues |
+
 ###### 1.1.3 Framework Documentation
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.1.3.1 | As an ML engineer | I want API documentation with practical code examples | So that I can integrate the framework into my ML workflows efficiently |
+| 1.1.3.2 | As a data scientist | I want conceptual documentation explaining the federated learning principles | So that I can understand how the Tyr Framework ensures privacy and accuracy |
+| 1.1.3.3 | As a technical writer | I want to maintain versioned framework documentation | So that users always access the correct documentation for their framework version |
 
 ##### 1.2 Installation
 
 ###### 1.2.1 Installation Process
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.2.1.1 | As a system administrator | I want an automated installation script | So that I can deploy the Tyr Framework with minimal manual configuration |
+| 1.2.1.2 | As a client developer | I want clear feedback during installation (logs, progress) | So that I can detect and fix issues early |
+| 1.2.1.3 | As a QA engineer | I want a reproducible installation process | So that I can test new releases in a controlled environment |
+
 ###### 1.2.2 Subscription Check
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.2.2.1 | As a client admin | I want the installation process to verify active subscription status | So that only authorized clients can install and use the framework |
+| 1.2.2.2 | As a finance officer | I want subscription validation integrated with billing | So that payment and access are always synchronized |
+| 1.2.2.3 | As a support engineer | I want alerts for failed subscription checks | So that I can assist clients in resolving access issues quickly |
 
 ##### 1.3 Help Desk
 
 ###### 1.3.1 Onboarding Technical Support
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.3.1.1 | As a new client technical lead | I want access to onboarding support via chat or ticket | So that I can get guidance during first-time setup |
+| 1.3.1.2 | As a support engineer | I want to log and categorize onboarding requests | So that I can identify common issues and improve documentation |
+| 1.3.1.3 | As a customer success manager | I want to track onboarding satisfaction | So that we can ensure positive first impressions and reduce churn |
+
 ###### 1.3.2 Installation Technical Support
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.3.2.1 | As a client developer | I want to open a ticket for installation-specific issues | So that I can resolve blocking problems quickly |
+| 1.3.2.2 | As a support engineer | I want a diagnostic tool to gather environment data | So that I can provide targeted troubleshooting |
+| 1.3.2.3 | As a support manager | I want KPIs on average resolution time | So that I can assess support performance and allocate resources |
+
 ###### 1.3.3 Framework Technical Support
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 1.3.3.1 | As a client ML engineer | I want to report bugs or unexpected model behavior | So that I can ensure reliable federated training outcomes |
+| 1.3.3.2 | As a technical support specialist | I want a ticketing system integrated with product logs | So that I can trace issues to specific framework components |
+| 1.3.3.2 | As a product engineer | I want aggregated feedback from support tickets | So that I can prioritize improvements for the next release |
 
 #### 2. Model Definition
 
