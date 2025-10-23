@@ -287,11 +287,36 @@ flowchart LR
 
 ###### 3.1.1 Peer Registration System
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.1.1.1 | As a federation admin | I want to register new peers into a federation | So that they can participate in distributed training sessions |
+| 3.1.1.2 | As a peer organization representative | I want to receive confirmation and credentials after registration | So that I can authenticate and join the federation securely |
+| 3.1.1.3 | As a system administrator | I want to automate peer registration through APIs | So that large federations can onboard multiple participants efficiently |
+
 ###### 3.1.2 Role Management
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.1.2.1 | As a federation admin | I want to assign specific roles (admin, contributor, observer) to members | So that responsibilities and access are clearly defined |
+| 3.1.2.2 | As a peer organization lead | I want to manage internal team roles within my organization’s account | So that each member has appropriate access rights |
+| 3.1.2.3 | As a compliance officer | I want to view a summary of all user roles and permissions | So that I can ensure the federation adheres to security policies |
 
 ###### 3.1.3 Access Control and Permissions
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.1.3.1 | As a security officer | I want fine-grained permission control for each API operation | So that peers can access only the resources they are authorized for |
+| 3.1.3.2 | As a developer | I want to define access policies through configuration files or APIs | So that access rules can be automated and version-controlled |
+| 3.1.3.3 | As a federation admin | I want to audit permission changes and access attempts | So that I can ensure compliance with internal and legal policies |
+
 ###### 3.1.4 Membership Lifecycle Management
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.1.4.1 | As a federation admin | I want to approve or revoke peer memberships | So that I can control which organizations are active in the federation |
+| 3.1.4.2 | As a peer organization manager | I want to temporarily suspend our participation | So that we can pause training without losing membership |
+| 3.1.4.3 | As a compliance officer | I want to ensure that all membership changes are logged | So that we have traceability for audits and legal verification |
+| 3.1.4.4 | As a developer | I want an API to automate membership updates | So that federation state changes can be integrated into management systems |
 
 ##### 3.2 Comunication Protocol
 
