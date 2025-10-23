@@ -148,23 +148,81 @@ flowchart LR
 
 ##### 2.1 Model Input
 
+###### 2.1.1 Input Schema Definition
+
+###### 2.1.2 Data Preprocessing Interface
+
+###### 2.1.3 Input Validation and Versioning
+
 ##### 2.2 Model Layers
 
+###### 2.2.1 Layer Configuration Interface
+
+###### 2.2.2 Supported Architectures Library
+
+###### 2.2.3 Model Architecture Validation
+
+###### 2.2.4 Custom Layer Support
+
 ##### 2.3 Model Output
+
+###### 2.3.1 Output Schema Definition
+
+###### 2.3.1 Export and Serialization 
+
+###### 2.3.1 Evaluation and Metrics Interface
 
 #### 3. Federated Learning (Framework Usage)
 
 ##### 3.1 Federation Members
 
+###### 3.1.1 Peer Registration System
+
+###### 3.1.2 Role Management
+
+###### 3.1.3 Access Control and Permissions
+
+###### 3.1.4 Membership Lifecycle Management
+
 ##### 3.2 Comunication Protocol
 
+###### 3.2.1 Secure Communication Layer
+
+###### 3.2.2 Message Serialization and Compression
+
+###### 3.2.3 Fault Tolerance and Retry Mechanisms
+
+###### 3.2.4 Audit Logging
+
 ##### 3.3 Model Training
+
+###### 3.3.1 Training Orchestration Engine
+
+###### 3.3.2 Aggregation Strategy Module
+
+###### 3.3.3 Progress Monitoring and Visualization
+
+###### 3.3.4 Error Handling and Recovery
 
 #### 4. Model Usage
 
 ##### 4.1 Model Storage
 
+###### 4.1.1 Version Control System
+
+###### 4.1.2 Access Control for Models
+
+###### 4.1.3 Integrity Verification
+
 ##### 4.2 Model Inference
+
+###### 4.2.1 Inference API
+
+###### 4.2.2 Edge Deployment Support
+
+###### 4.2.3 Performance Monitoring
+
+###### 4.2.4 Model Update Mechanism
 
 ## PMLC Model Choice
 
