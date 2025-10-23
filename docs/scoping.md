@@ -198,27 +198,88 @@ flowchart LR
 
 ###### 2.1.1 Input Schema Definition
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.1.1.1 | As a data scientist | I want to define the expected input schema for my model | So that the system can validate incoming data consistency |
+| 2.1.1.2 | As a ML engineer | I want to store and reuse input schema templates | So that I can quickly configure similar models in the future |
+| 2.1.1.3 | As a system integrator | I want to retrieve input schema definitions through the API | So that I can ensure compatibility between data pipelines and the model |
+
 ###### 2.1.2 Data Preprocessing Interface
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.1.2.1 | As a ML engineer | I want to define preprocessing steps within the framework | So that I can automate data normalization before training |
+| 2.1.2.2 | As a data scientist | I want to reuse and share preprocessing functions | So that I can ensure consistency across different models |
+| 2.1.2.3 | As a developer | I want to debug preprocessing workflows | So that I can identify and fix data transformation errors |
+
 ###### 2.1.3 Input Validation and Versioning
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.1.3.1 | As a ML engineer | I want the system to automatically validate input data against the schema | So that incorrect or missing fields are detected early |
+| 2.1.3.2 | As a data scientist | I want versioned validation rules | So that I can track changes in input requirements over time |
+| 2.1.3.3 | As a compliance officer | I want validation logs for each dataset submission | So that I can ensure traceability and data governance compliance |
 
 ##### 2.2 Model Layers
 
 ###### 2.2.1 Layer Configuration Interface
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.2.1.1 | As a ML engineer | I want a user-friendly interface to configure model layers | So that I can easily design and modify architectures |
+| 2.2.1.2 | As a developer | I want to define layer parameters programmatically | So that I can automate model creation through code |
+| 2.2.1.3 | As a data scientist | I want to visualize the layer configuration | So that I can understand and explain the model’s structure |
+
 ###### 2.2.2 Supported Architectures Library
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.2.2.1 | As a ML engineer | I want access to a library of supported architectures (CNN, RNN, Transformer) | So that I can quickly prototype models without building from scratch |
+| 2.2.2.2 | As a product manager | I want to see which architectures are supported | So that I can plan feature expansions and client communications |
+| 2.2.2.3 | As a developer | I want to import predefined architecture templates | So that I can speed up model setup and reduce configuration errors |
 
 ###### 2.2.3 Model Architecture Validation
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.2.3.1 | As a ML engineer | I want the system to validate custom architectures | So that invalid configurations are caught before training |
+| 2.2.3.2 | As a QA engineer | I want automated tests to verify architecture compatibility | So that releases don’t break model creation workflows |
+| 2.2.3.3 | As a data scientist | I want error feedback when architecture constraints are violated | So that I can quickly fix model definition issues |
+
 ###### 2.2.4 Custom Layer Support
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.2.4.1 | As a ML engineer | I want to define and integrate my own custom layers | So that I can experiment with novel architectures |
+| 2.2.4.2 | As a developer | I want custom layers to be sandboxed | So that they don’t compromise the framework’s security or stability |
+| 2.2.4.3 | As a QA engineer | I want unit tests for each registered custom layer | So that I can ensure correctness and performance consistency |
 
 ##### 2.3 Model Output
 
 ###### 2.3.1 Output Schema Definition
 
-###### 2.3.1 Export and Serialization 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.3.1.1 | As a ML engineer | I want to define the output schema for model predictions | So that downstream applications can interpret results correctly |
+| 2.3.1.2 | As a data scientist | I want to visualize expected output dimensions and labels | So that I can verify output consistency with the task |
+| 2.3.1.3 | As a developer | I want to access output schema definitions through the API | So that I can integrate them into my deployment pipeline |
 
-###### 2.3.1 Evaluation and Metrics Interface
+###### 2.3.2 Export and Serialization 
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.3.2.1 | As a ML engineer | I want to export trained models in standard formats (e.g., ONNX, TensorFlow SavedModel) | So that I can deploy them across different environments |
+| 2.3.2.2 | As a DevOps engineer | I want the framework to serialize models with metadata and versioning info | So that I can manage deployments and rollbacks efficiently |
+| 2.3.2.3 | As a developer | I want to load serialized models directly through the API | So that I can automate inference workflows in production |
+
+###### 2.3.3 Evaluation and Metrics Interface
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 2.3.3.1 | As a data scientist | I want to access standard evaluation metrics (accuracy, precision, recall, F1, etc.) | So that I can assess model performance consistently |
+| 2.3.3.2 | As a ML engineer | I want to define and register custom metrics | So that I can evaluate models on domain-specific tasks |
+| 2.3.3.3 | As a project manager | I want automated metric reports after training completion | So that stakeholders can track performance without technical overhead |
+| 2.3.3.4 | As a developer | I want metrics available through a REST or SDK interface | So that I can integrate evaluation results into monitoring dashboards |
 
 #### 3. Federated Learning (Framework Usage)
 
