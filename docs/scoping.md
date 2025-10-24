@@ -617,9 +617,15 @@ flowchart
 
 ## Project Overview Statement
 
+The following is the Project Overview Statement for the project 'Tyr Framework'.
+
 ### Opportunity
 
+Given the Secure Average Computation algorithm proposed in \[[Wink et al., 2021][1]\], an implementation of this approach promises to enable collaboration across companies and organizations, in the development of a Federated Learining Model, without the need of sharing datasets across partecipants. A commercially available framework implementing this algorithm does not exist, although the need for such a framework is high. OpenML could implement such a framework and add it as a product to it's commercial offer.
+
 ### Goal
+
+Create and provide a SAAS Framework called Tyr Framework that allows companies and organization to use the Secure Average Computation (TODO finish this)
 
 ### Objectives
 
@@ -644,3 +650,5 @@ flowchart
 #### Threats
 
 TODO check if the POS answers the questions posed on slide 86
+
+[1]: https://ieeexplore.ieee.org/document/9502443
