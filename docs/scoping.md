@@ -118,6 +118,8 @@ flowchart LR
     Initiative-- has many -->Capability
     Capability-- has many -->Feature
     Feature-- is implemented by many -->Story
+    Feature-- can have many -->Epic
+    Epic-- is made of many -->Story
 ```
 
 #### 1. Client Onboarding and Support
@@ -322,85 +324,150 @@ flowchart LR
 
 ###### 3.2.1 Secure Communication Layer
 
+###### Epic: Transport Security Implementation
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.2.1.1 | As a system architect | I want all inter-peer communications to be encrypted | So that sensitive model updates and metadata remain confidential |
-| 3.2.1.2 | As a security officer | I want mutual authentication between peers | So that only verified participants can exchange data |
-| 3.2.1.3 | As a network engineer | I want to enforce TLS 1.3 with configurable cipher suites | So that communication complies with security best practices |
-| 3.2.1.4 | As a peer administrator | I want automatic certificate rotation and renewal | So that long-running deployments maintain trust without manual intervention |
-| 3.2.1.5 | As a compliance officer | I want to log all authentication events | So that security audits can verify the integrity of communication endpoints |
+| 3.2.1.1 | As a system architect | I want to establish TLS 1.3 connections between all peers | So that all data in transit is encrypted by default |
+| 3.2.1.2 | As a security officer | I want mutual TLS authentication for peer-to-peer communication | So that both parties verify each other's identity before exchanging data |
+| 3.2.1.3 | As a network engineer | I want configurable cipher suites and security protocols | So that communication complies with organizational security policies |
+| 3.2.1.4 | As a peer administrator | I want automatic certificate management and renewal | So that security credentials remain valid without manual intervention |
+
+###### Epic: Authentication and Identity Management
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.1.5 | As a security officer | I want to integrate with enterprise identity providers | So that existing corporate authentication systems can be leveraged |
+| 3.2.1.6 | As a system operator | I want to monitor authentication success/failure rates | So that I can detect potential security threats early |
+| 3.2.1.7 | As a compliance officer | I want comprehensive audit logs for all authentication events | So that security audits can verify system integrity |
 
 ###### 3.2.2 Message Serialization and Compression
 
+###### Epic: Message Format Standardization
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.2.2.1 | As a developer | I want to use a standardized message schema across all peers | So that communication remains consistent and version-safe |
-| 3.2.2.2 | As a system architect | I want serialized messages to be compact and schema-driven | So that network overhead is minimized while preserving clarity |
-| 3.2.2.3 | As a backend engineer | I want to enable compression for large payloads | So that bandwidth consumption is reduced during federated training |
-| 3.2.2.4 | As a maintainer | I want backward-compatible message formats | So that protocol updates do not break existing deployments |
-| 3.2.2.5 | As a data engineer | I want a registry of message types and schema versions | So that system integration remains predictable and traceable |
+| 3.2.2.1 | As a developer | I want to use Protocol Buffers for all inter-peer messages | So that communication remains consistent and version-safe |
+| 3.2.2.2 | As a system architect | I want a versioned message schema registry | So that protocol evolution is managed systematically |
+| 3.2.2.3 | As a backend engineer | I want schema validation for all incoming messages | So that malformed or malicious messages are rejected |
+
+###### Epic: Payload Optimization
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.2.4 | As a network engineer | I want configurable compression algorithms (gzip, brotli) | So that bandwidth consumption is optimized for different network conditions |
+| 3.2.2.5 | As a data engineer | I want compression thresholds based on payload size | So that small messages avoid unnecessary compression overhead |
+| 3.2.2.6 | As a maintainer | I want backward-compatible message format updates | So that protocol evolution doesn't break existing deployments |
 
 ###### 3.2.3 Fault Tolerance and Retry Mechanisms
 
+###### Epic: Message Delivery Guarantees
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.2.3.1 | As a system operator | I want automatic retries for failed message deliveries | So that temporary network issues do not disrupt training |
-| 3.2.3.2 | As a developer | I want idempotent message handling | So that duplicate messages do not cause inconsistent state |
-| 3.2.3.3 | As a network engineer | I want configurable retry policies and exponential backoff | So that retransmissions are adaptive to network conditions |
-| 3.2.3.4 | As a peer node | I want to queue unsent messages locally during outages | So that no updates are lost when connectivity is restored |
-| 3.2.3.5 | As a federation admin | I want to monitor failed and retried transmissions | So that I can diagnose communication reliability issues |
+| 3.2.3.1 | As a system operator | I want configurable retry policies with exponential backoff | So that temporary network issues don't disrupt training |
+| 3.2.3.2 | As a developer | I want idempotent message handlers for all critical operations | So that duplicate messages don't cause inconsistent state |
+| 3.2.3.3 | As a network engineer | I want circuit breaker patterns for unreliable peer connections | So that the system doesn't waste resources on failing endpoints |
+
+###### Epic: Local Message Persistence
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.3.4 | As a peer node | I want persistent local queues for outgoing messages | So that no model updates are lost during network outages |
+| 3.2.3.5 | As a system administrator | I want configurable queue size limits and retention policies | So that disk space is managed effectively during extended outages |
+| 3.2.3.6 | As a federation admin | I want monitoring for queue backlogs and delivery delays | So that I can identify and resolve communication bottlenecks |
 
 ###### 3.2.4 Audit Logging
 
+###### Epic: Comprehensive Event Logging
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.2.4.1 | As a compliance officer | I want to log all communication events in an immutable format | So that regulatory audits can verify system activity |
-| 3.2.4.2 | As a system administrator | I want to encrypt logs at rest | So that sensitive metadata remains protected from unauthorized access |
-| 3.2.4.3 | As a security officer | I want to detect and flag suspicious communication patterns | So that potential intrusions can be investigated promptly |
-| 3.2.4.4 | As a developer | I want structured, queryable logs | So that I can debug communication issues efficiently |
-| 3.2.4.5 | As a federation admin | I want configurable log retention and rotation policies | So that storage is optimized without losing critical audit trails |
+| 3.2.4.1 | As a compliance officer | I want immutable audit logs for all communication events | So that regulatory requirements for data provenance are met |
+| 3.2.4.2 | As a system administrator | I want encrypted log storage with access controls | So that sensitive audit data is protected from unauthorized access |
+| 3.2.4.3 | As a security officer | I want automated anomaly detection in communication patterns | So that potential security incidents are flagged for investigation |
+
+###### Epic: Log Management and Analysis
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.4.4 | As a developer | I want structured JSON logs with consistent schemas | So that log analysis and debugging are efficient |
+| 3.2.4.5 | As a system operator | I want configurable log retention and archiving policies | So that storage costs are optimized while maintaining compliance |
+| 3.2.4.6 | As a federation admin | I want dashboard views of communication health and volumes | So that I can monitor overall system activity at a glance |
 
 ##### 3.3 Model Training
 
 ###### 3.3.1 Training Orchestration Engine
 
+###### Epic: Training Session Management
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.3.1.1 | As a federation admin | I want to schedule and coordinate training rounds across peers | So that model updates happen in synchronized cycles |
-| 3.3.1.2 | As a system architect | I want to dynamically allocate resources based on peer availability | So that training efficiency is maximized |
-| 3.3.1.3 | As a peer node operator | I want local training to automatically start when a round is initiated | So that participation requires minimal manual intervention |
-| 3.3.1.4 | As a developer | I want to define training configurations via an API or configuration file | So that orchestration can be automated and version-controlled |
-| 3.3.1.5 | As a system operator | I want to visualize the status of each training round | So that I can monitor overall system health and participation |
+| 3.3.1.1 | As a federation admin | I want to create and schedule training sessions with specific parameters | So that model training happens in controlled, reproducible cycles |
+| 3.3.1.2 | As a system architect | I want dynamic peer discovery and resource allocation | So that training can adapt to changing peer availability |
+| 3.3.1.3 | As a peer node operator | I want automatic participation in scheduled training rounds | So that my resources contribute without constant manual intervention |
+
+###### Epic: Training Configuration and Automation
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.1.4 | As a developer | I want version-controlled training configuration templates | So that training setups are reproducible and shareable |
+| 3.3.1.5 | As a system operator | I want real-time visualization of training session status | So that I can monitor progress and identify issues quickly |
+| 3.3.1.6 | As a data scientist | I want to programmatically start and stop training sessions | So that I can integrate training into automated ML pipelines |
 
 ###### 3.3.2 Aggregation Strategy Module
 
+###### Epic: Core Aggregation Algorithms
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.3.2.1 | As a data scientist | I want to select from predefined aggregation strategies (e.g., FedAvg, FedProx) | So that I can experiment with different federated learning paradigms |
-| 3.3.2.2 | As a researcher | I want to define custom aggregation algorithms | So that I can test novel approaches to model fusion |
-| 3.3.2.3 | As a system architect | I want aggregation to occur securely and efficiently | So that performance and privacy are both maintained |
-| 3.3.2.4 | As a peer | I want cryptographic guarantees that my local updates are included correctly | So that I can trust the integrity of the global model |
-| 3.3.2.5 | As a developer | I want clear API hooks for aggregation modules | So that new strategies can be integrated without modifying the core system |
+| 3.3.2.1 | As a data scientist | I want to select from built-in aggregation strategies (FedAvg, FedProx) | So that I can choose the best approach for my use case |
+| 3.3.2.2 | As a system architect | I want secure aggregation with differential privacy options | So that individual participant contributions remain private |
+| 3.3.2.3 | As a peer | I want verifiable inclusion of my updates in aggregation | So that I can trust the integrity of the global model |
+
+###### Epic: Custom Aggregation Framework
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.2.4 | As a researcher | I want a plugin architecture for custom aggregation algorithms | So that I can implement and test novel federated learning approaches |
+| 3.3.2.5 | As a developer | I want clear APIs and SDKs for aggregation strategy development | So that extending the framework is straightforward |
+| 3.3.2.6 | As a QA engineer | I want validation tests for all registered aggregation strategies | So that model quality and system stability are maintained |
 
 ###### 3.3.3 Progress Monitoring and Visualization
 
+###### Epic: Real-time Training Metrics
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.3.3.1 | As a data scientist | I want real-time metrics on model convergence | So that I can assess training performance |
-| 3.3.3.2 | As a peer admin | I want to view my organization’s local contribution statistics | So that I can evaluate our participation effectiveness |
-| 3.3.3.3 | As a project manager | I want to track overall progress across all peers | So that I can report on the federation’s status to stakeholders |
-| 3.3.3.4 | As a developer | I want an API endpoint for progress data | So that I can integrate visualization into custom dashboards |
-| 3.3.3.5 | As a compliance officer | I want logged progress reports for auditing purposes | So that I can ensure training transparency and accountability |
+| 3.3.3.1 | As a data scientist | I want live charts showing model convergence metrics | So that I can assess training effectiveness in real-time |
+| 3.3.3.2 | As a peer admin | I want detailed reports on my organization's contribution metrics | So that I can evaluate our participation value and resource usage |
+| 3.3.3.3 | As a project manager | I want high-level progress dashboards with key milestones | So that I can report status to stakeholders without technical details |
+
+###### Epic: Monitoring Integration
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.3.4 | As a developer | I want REST APIs for accessing all training metrics | So that I can build custom monitoring and alerting systems |
+| 3.3.3.5 | As a compliance officer | I want immutable progress records for each training session | So that I can demonstrate training integrity for audits |
+| 3.3.3.6 | As a system operator | I want configurable alerts for training anomalies or stalls | So that I can proactively address issues before they impact results |
 
 ###### 3.3.4 Error Handling and Recovery
 
+###### Epic: Failure Detection and Management
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.3.4.1 | As a system operator | I want automatic detection of failed peer updates | So that the system can continue training without interruptions |
-| 3.3.4.2 | As a developer | I want standardized error codes and messages | So that issues can be debugged quickly and consistently |
-| 3.3.4.3 | As a network engineer | I want retry and rollback mechanisms for failed transmissions | So that transient failures don’t corrupt model updates |
-| 3.3.4.4 | As a federation admin | I want configurable policies for skipping or retrying failed peers | So that the training remains resilient and adaptable |
-| 3.3.4.5 | As a security officer | I want to flag repeated peer failures for investigation | So that potential malicious activity can be identified early |
+| 3.3.4.1 | As a system operator | I want automatic detection of peer training failures | So that the system can continue with available participants |
+| 3.3.4.2 | As a developer | I want comprehensive error categorization and logging | So that issues can be diagnosed and resolved systematically |
+| 3.3.4.3 | As a network engineer | I want graceful handling of network partitions during training | So that temporary connectivity issues don't corrupt training sessions |
+
+###### Epic: Training Resilience
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.4.4 | As a federation admin | I want configurable policies for handling peer dropouts | So that training can continue robustly despite participant instability |
+| 3.3.4.5 | As a security officer | I want monitoring for suspicious peer behavior patterns | So that potential malicious activity can be detected early |
+| 3.3.4.6 | As a data scientist | I want checkpointing and resume capabilities for long trainings | So that interrupted sessions can continue from the last good state |
 
 #### 4. Model Usage
 
@@ -440,43 +507,75 @@ flowchart LR
 
 ###### 4.2.1 Inference API
 
+###### Epic: Core Inference Service
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 4.2.1.1 | As a developer | I want a REST and gRPC API for model inference | So that I can integrate predictions into diverse applications |
-| 4.2.1.2 | As a data scientist | I want to batch inference requests | So that I can efficiently process large datasets |
-| 4.2.1.3 | As a system architect | I want scalable API endpoints with load balancing | So that inference requests are handled efficiently under heavy load |
-| 4.2.1.4 | As a peer organization | I want secure authentication and authorization for inference requests | So that only trusted users and systems can access predictions |
-| 4.2.1.5 | As a DevOps engineer | I want API usage metrics and request tracing | So that I can optimize system performance and diagnose issues |
+| 4.2.1.1 | As a developer | I want REST and gRPC endpoints for model inference | So that I can integrate predictions into diverse applications |
+| 4.2.1.2 | As a data scientist | I want batch inference capabilities for large datasets | So that I can process multiple requests efficiently |
+| 4.2.1.3 | As a system architect | I want horizontally scalable inference services | So that performance scales with demand |
+
+###### Epic: Inference Security and Management
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.1.4 | As a security officer | I want authentication and authorization for all inference requests | So that only authorized users can access model predictions |
+| 4.2.1.5 | As a DevOps engineer | I want comprehensive metrics and tracing for inference APIs | So that I can monitor performance and diagnose issues |
+| 4.2.1.6 | As a system operator | I want rate limiting and quota management | So that inference resources are fairly allocated and protected from abuse |
 
 ###### 4.2.2 Edge Deployment Support
 
+###### Epic: Edge Model Optimization
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 4.2.2.1 | As a developer | I want to export lightweight models optimized for edge devices | So that I can deploy inference locally with limited resources |
-| 4.2.2.2 | As a system architect | I want a deployment toolkit for edge inference | So that I can standardize installation and monitoring across devices |
-| 4.2.2.3 | As a peer organization admin | I want to manage edge model versions remotely | So that updates and rollbacks are centralized and controlled |
-| 4.2.2.4 | As a security officer | I want encrypted communication between edge devices and servers | So that sensitive model outputs remain confidential |
-| 4.2.2.5 | As a DevOps engineer | I want to monitor device health and model runtime status | So that potential failures or drifts can be detected early |
+| 4.2.2.1 | As a developer | I want model quantization and pruning for edge deployment | So that models fit within device resource constraints |
+| 4.2.2.2 | As a system architect | I want a standardized edge deployment package format | So that installation is consistent across different edge environments |
+| 4.2.2.3 | As a peer organization admin | I want centralized management of edge model versions | So that updates can be rolled out consistently across all devices |
+
+###### Epic: Edge Operations Management
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.2.4 | As a security officer | I want secure communication channels for edge device updates | So that model deployments and data remain protected |
+| 4.2.2.5 | As a DevOps engineer | I want remote monitoring of edge device health and performance | So that I can detect and address issues proactively |
+| 4.2.2.6 | As a system operator | I want automated rollback capabilities for edge deployments | So that problematic model updates can be reverted quickly |
 
 ###### 4.2.3 Performance Monitoring
 
+###### Epic: Inference Metrics Collection
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 4.2.3.1 | As a data scientist | I want to track latency and throughput for inference requests | So that I can evaluate and optimize model efficiency |
-| 4.2.3.2 | As a DevOps engineer | I want real-time dashboards for model performance | So that I can detect bottlenecks and scale resources accordingly |
-| 4.2.3.3 | As a system operator | I want alerts for abnormal inference delays | So that I can take immediate corrective action |
-| 4.2.3.4 | As a project manager | I want summary reports on model usage and response times | So that I can assess service-level compliance |
-| 4.2.3.5 | As a compliance officer | I want inference logs retained for auditing | So that predictions and their metadata are traceable for verification |
+| 4.2.3.1 | As a data scientist | I want detailed latency and throughput metrics per model | So that I can optimize models for production performance |
+| 4.2.3.2 | As a DevOps engineer | I want real-time dashboards showing inference health | So that I can ensure service level objectives are met |
+| 4.2.3.3 | As a system operator | I want automated alerts for performance degradation | So that I can address issues before they impact users |
+
+###### Epic: Analytics and Reporting
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.3.4 | As a project manager | I want usage reports showing model adoption and performance | So that I can make data-driven decisions about model investments |
+| 4.2.3.5 | As a compliance officer | I want immutable logs of all inference requests and responses | So that I can demonstrate proper system operation for audits |
+| 4.2.3.6 | As a business analyst | I want aggregated inference analytics | So that I can understand usage patterns and business impact |
 
 ###### 4.2.4 Model Update Mechanism
 
+###### Epic: Deployment Orchestration
+
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 4.2.4.1 | As a system administrator | I want to deploy updated models without downtime | So that service continuity is maintained |
-| 4.2.4.2 | As a developer | I want versioned model deployment APIs | So that I can safely roll back or switch between model versions |
-| 4.2.4.3 | As a federation admin | I want automated update propagation to all peers | So that model synchronization is consistent across the federation |
-| 4.2.4.4 | As a QA engineer | I want to test model updates in staging before production rollout | So that potential issues are caught early |
-| 4.2.4.5 | As a compliance officer | I want logs of all model update events | So that I can verify update history and maintain auditability |
+| 4.2.4.1 | As a system administrator | I want zero-downtime model deployment strategies | So that service continuity is maintained during updates |
+| 4.2.4.2 | As a developer | I want versioned deployment APIs with rollback capabilities | So that I can safely manage model evolution |
+| 4.2.4.3 | As a federation admin | I want automated model synchronization across all peers | So that the federation remains consistent |
+
+###### Epic: Update Validation and Safety
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.4.4 | As a QA engineer | I want staging environments for pre-production model testing | So that potential issues are caught before affecting users |
+| 4.2.4.5 | As a compliance officer | I want comprehensive audit trails for all model updates | So that I can verify deployment history and maintain compliance |
+| 4.2.4.6 | As a data scientist | I want canary deployment capabilities for new models | So that I can gradually roll out updates while monitoring performance |
 
 ## PMLC Model Choice
 
