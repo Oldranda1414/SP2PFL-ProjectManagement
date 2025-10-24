@@ -609,10 +609,10 @@ flowchart LR
     B --> C[Launch Increment]
     C --> D[Monitor & Control]
     D --> E[Close Increment]
-    F --> G[Next Increment]
-    G --> H{Last Increment?}
-    H -->|Yes| I[Close]
-    H -->|No| C
+    E --> F[Next Increment]
+    F --> G{Last Increment?}
+    G -->|Yes| H[Close]
+    G -->|No| C
 ```
 
 ## Project Overview Statement
