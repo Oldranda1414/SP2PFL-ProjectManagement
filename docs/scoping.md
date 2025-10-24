@@ -114,7 +114,7 @@ For these reasons the User Stories apprach is chosen to represent project Requir
 To organizer User Stories into a hierarchical structure the following concepts are used:
 
 ```mermaid
-flowchart LR
+flowchart
     Initiative-- has many -->Capability
     Capability-- has many -->Feature
     Feature-- is implemented by many -->Story
@@ -604,7 +604,7 @@ The Tyr Framework project has many characteristics to consider when choosing the
 Given the pros and cons considered, a hybrid approach is choosen, aka the incremental model. The folling graph shows what this model entails:
 
 ```mermaid
-flowchart LR
+flowchart
     A[Scope] --> B[Plan]
     B --> C[Launch Increment]
     C --> D[Monitor & Control]
@@ -642,3 +642,5 @@ flowchart LR
 #### Opportunities
 
 #### Threats
+
+TODO check if the POS answers the questions posed on slide 86
