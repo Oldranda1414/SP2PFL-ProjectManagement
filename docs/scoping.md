@@ -190,7 +190,7 @@ flowchart LR
 |----|-----|------|-----|
 | 1.3.3.1 | As a client ML engineer | I want to report bugs or unexpected model behavior | So that I can ensure reliable federated training outcomes |
 | 1.3.3.2 | As a technical support specialist | I want a ticketing system integrated with product logs | So that I can trace issues to specific framework components |
-| 1.3.3.2 | As a product engineer | I want aggregated feedback from support tickets | So that I can prioritize improvements for the next release |
+| 1.3.3.3 | As a product engineer | I want aggregated feedback from support tickets | So that I can prioritize improvements for the next release |
 
 #### 2. Model Definition
 
@@ -318,25 +318,89 @@ flowchart LR
 | 3.1.4.3 | As a compliance officer | I want to ensure that all membership changes are logged | So that we have traceability for audits and legal verification |
 | 3.1.4.4 | As a developer | I want an API to automate membership updates | So that federation state changes can be integrated into management systems |
 
-##### 3.2 Comunication Protocol
+##### 3.2 Communication Protocol
 
 ###### 3.2.1 Secure Communication Layer
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.1.1 | As a system architect | I want all inter-peer communications to be encrypted | So that sensitive model updates and metadata remain confidential |
+| 3.2.1.2 | As a security officer | I want mutual authentication between peers | So that only verified participants can exchange data |
+| 3.2.1.3 | As a network engineer | I want to enforce TLS 1.3 with configurable cipher suites | So that communication complies with security best practices |
+| 3.2.1.4 | As a peer administrator | I want automatic certificate rotation and renewal | So that long-running deployments maintain trust without manual intervention |
+| 3.2.1.5 | As a compliance officer | I want to log all authentication events | So that security audits can verify the integrity of communication endpoints |
+
 ###### 3.2.2 Message Serialization and Compression
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.2.1 | As a developer | I want to use a standardized message schema across all peers | So that communication remains consistent and version-safe |
+| 3.2.2.2 | As a system architect | I want serialized messages to be compact and schema-driven | So that network overhead is minimized while preserving clarity |
+| 3.2.2.3 | As a backend engineer | I want to enable compression for large payloads | So that bandwidth consumption is reduced during federated training |
+| 3.2.2.4 | As a maintainer | I want backward-compatible message formats | So that protocol updates do not break existing deployments |
+| 3.2.2.5 | As a data engineer | I want a registry of message types and schema versions | So that system integration remains predictable and traceable |
 
 ###### 3.2.3 Fault Tolerance and Retry Mechanisms
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.3.1 | As a system operator | I want automatic retries for failed message deliveries | So that temporary network issues do not disrupt training |
+| 3.2.3.2 | As a developer | I want idempotent message handling | So that duplicate messages do not cause inconsistent state |
+| 3.2.3.3 | As a network engineer | I want configurable retry policies and exponential backoff | So that retransmissions are adaptive to network conditions |
+| 3.2.3.4 | As a peer node | I want to queue unsent messages locally during outages | So that no updates are lost when connectivity is restored |
+| 3.2.3.5 | As a federation admin | I want to monitor failed and retried transmissions | So that I can diagnose communication reliability issues |
+
 ###### 3.2.4 Audit Logging
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.2.4.1 | As a compliance officer | I want to log all communication events in an immutable format | So that regulatory audits can verify system activity |
+| 3.2.4.2 | As a system administrator | I want to encrypt logs at rest | So that sensitive metadata remains protected from unauthorized access |
+| 3.2.4.3 | As a security officer | I want to detect and flag suspicious communication patterns | So that potential intrusions can be investigated promptly |
+| 3.2.4.4 | As a developer | I want structured, queryable logs | So that I can debug communication issues efficiently |
+| 3.2.4.5 | As a federation admin | I want configurable log retention and rotation policies | So that storage is optimized without losing critical audit trails |
 
 ##### 3.3 Model Training
 
 ###### 3.3.1 Training Orchestration Engine
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.1.1 | As a federation admin | I want to schedule and coordinate training rounds across peers | So that model updates happen in synchronized cycles |
+| 3.3.1.2 | As a system architect | I want to dynamically allocate resources based on peer availability | So that training efficiency is maximized |
+| 3.3.1.3 | As a peer node operator | I want local training to automatically start when a round is initiated | So that participation requires minimal manual intervention |
+| 3.3.1.4 | As a developer | I want to define training configurations via an API or configuration file | So that orchestration can be automated and version-controlled |
+| 3.3.1.5 | As a system operator | I want to visualize the status of each training round | So that I can monitor overall system health and participation |
+
 ###### 3.3.2 Aggregation Strategy Module
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.2.1 | As a data scientist | I want to select from predefined aggregation strategies (e.g., FedAvg, FedProx) | So that I can experiment with different federated learning paradigms |
+| 3.3.2.2 | As a researcher | I want to define custom aggregation algorithms | So that I can test novel approaches to model fusion |
+| 3.3.2.3 | As a system architect | I want aggregation to occur securely and efficiently | So that performance and privacy are both maintained |
+| 3.3.2.4 | As a peer | I want cryptographic guarantees that my local updates are included correctly | So that I can trust the integrity of the global model |
+| 3.3.2.5 | As a developer | I want clear API hooks for aggregation modules | So that new strategies can be integrated without modifying the core system |
 
 ###### 3.3.3 Progress Monitoring and Visualization
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.3.1 | As a data scientist | I want real-time metrics on model convergence | So that I can assess training performance |
+| 3.3.3.2 | As a peer admin | I want to view my organization’s local contribution statistics | So that I can evaluate our participation effectiveness |
+| 3.3.3.3 | As a project manager | I want to track overall progress across all peers | So that I can report on the federation’s status to stakeholders |
+| 3.3.3.4 | As a developer | I want an API endpoint for progress data | So that I can integrate visualization into custom dashboards |
+| 3.3.3.5 | As a compliance officer | I want logged progress reports for auditing purposes | So that I can ensure training transparency and accountability |
+
 ###### 3.3.4 Error Handling and Recovery
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 3.3.4.1 | As a system operator | I want automatic detection of failed peer updates | So that the system can continue training without interruptions |
+| 3.3.4.2 | As a developer | I want standardized error codes and messages | So that issues can be debugged quickly and consistently |
+| 3.3.4.3 | As a network engineer | I want retry and rollback mechanisms for failed transmissions | So that transient failures don’t corrupt model updates |
+| 3.3.4.4 | As a federation admin | I want configurable policies for skipping or retrying failed peers | So that the training remains resilient and adaptable |
+| 3.3.4.5 | As a security officer | I want to flag repeated peer failures for investigation | So that potential malicious activity can be identified early |
 
 #### 4. Model Usage
 
@@ -344,19 +408,75 @@ flowchart LR
 
 ###### 4.1.1 Version Control System
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.1.1.1 | As a data scientist | I want to store multiple versions of trained models | So that I can compare performance across iterations |
+| 4.1.1.2 | As a developer | I want to tag model versions with metadata such as date and training parameters | So that I can easily identify and reproduce experiments |
+| 4.1.1.3 | As a system administrator | I want automated versioning when a new model is aggregated | So that the global model evolution is tracked without manual effort |
+| 4.1.1.4 | As a project manager | I want to view a history of model releases | So that I can monitor progress and milestones across the project lifecycle |
+| 4.1.1.5 | As a compliance officer | I want immutable records of all model versions | So that I can ensure traceability for audits and regulatory compliance |
+
 ###### 4.1.2 Access Control for Models
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.1.2.1 | As a federation admin | I want to define role-based access permissions for models | So that only authorized users can download or modify them |
+| 4.1.2.2 | As a security officer | I want all model access events to be logged | So that I can detect and investigate unauthorized access attempts |
+| 4.1.2.3 | As a peer organization manager | I want to control which internal teams can access specific models | So that sensitive models remain restricted to appropriate groups |
+| 4.1.2.4 | As a developer | I want API tokens with scoped permissions | So that automated systems can interact with models securely |
+| 4.1.2.5 | As a system architect | I want model storage integrated with centralized identity management | So that access control policies remain consistent across services |
+
 ###### 4.1.3 Integrity Verification
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.1.3.1 | As a security officer | I want to verify model integrity using cryptographic hashes | So that I can detect tampering or corruption |
+| 4.1.3.2 | As a developer | I want automatic checksum generation upon model upload | So that validation occurs without manual intervention |
+| 4.1.3.3 | As a system operator | I want periodic integrity checks for stored models | So that long-term storage remains reliable and consistent |
+| 4.1.3.4 | As a peer admin | I want to verify the authenticity of downloaded models | So that I can trust the model’s origin and contents |
+| 4.1.3.5 | As a compliance officer | I want all integrity verification events recorded | So that audit trails confirm model authenticity and trustworthiness |
 
 ##### 4.2 Model Inference
 
 ###### 4.2.1 Inference API
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.1.1 | As a developer | I want a REST and gRPC API for model inference | So that I can integrate predictions into diverse applications |
+| 4.2.1.2 | As a data scientist | I want to batch inference requests | So that I can efficiently process large datasets |
+| 4.2.1.3 | As a system architect | I want scalable API endpoints with load balancing | So that inference requests are handled efficiently under heavy load |
+| 4.2.1.4 | As a peer organization | I want secure authentication and authorization for inference requests | So that only trusted users and systems can access predictions |
+| 4.2.1.5 | As a DevOps engineer | I want API usage metrics and request tracing | So that I can optimize system performance and diagnose issues |
+
 ###### 4.2.2 Edge Deployment Support
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.2.1 | As a developer | I want to export lightweight models optimized for edge devices | So that I can deploy inference locally with limited resources |
+| 4.2.2.2 | As a system architect | I want a deployment toolkit for edge inference | So that I can standardize installation and monitoring across devices |
+| 4.2.2.3 | As a peer organization admin | I want to manage edge model versions remotely | So that updates and rollbacks are centralized and controlled |
+| 4.2.2.4 | As a security officer | I want encrypted communication between edge devices and servers | So that sensitive model outputs remain confidential |
+| 4.2.2.5 | As a DevOps engineer | I want to monitor device health and model runtime status | So that potential failures or drifts can be detected early |
 
 ###### 4.2.3 Performance Monitoring
 
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.3.1 | As a data scientist | I want to track latency and throughput for inference requests | So that I can evaluate and optimize model efficiency |
+| 4.2.3.2 | As a DevOps engineer | I want real-time dashboards for model performance | So that I can detect bottlenecks and scale resources accordingly |
+| 4.2.3.3 | As a system operator | I want alerts for abnormal inference delays | So that I can take immediate corrective action |
+| 4.2.3.4 | As a project manager | I want summary reports on model usage and response times | So that I can assess service-level compliance |
+| 4.2.3.5 | As a compliance officer | I want inference logs retained for auditing | So that predictions and their metadata are traceable for verification |
+
 ###### 4.2.4 Model Update Mechanism
+
+| ID | Who | What | Why |
+|----|-----|------|-----|
+| 4.2.4.1 | As a system administrator | I want to deploy updated models without downtime | So that service continuity is maintained |
+| 4.2.4.2 | As a developer | I want versioned model deployment APIs | So that I can safely roll back or switch between model versions |
+| 4.2.4.3 | As a federation admin | I want automated update propagation to all peers | So that model synchronization is consistent across the federation |
+| 4.2.4.4 | As a QA engineer | I want to test model updates in staging before production rollout | So that potential issues are caught early |
+| 4.2.4.5 | As a compliance officer | I want logs of all model update events | So that I can verify update history and maintain auditability |
 
 ## PMLC Model Choice
 
