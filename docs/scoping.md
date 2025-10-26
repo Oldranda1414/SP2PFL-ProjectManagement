@@ -421,7 +421,7 @@ flowchart
 
 | ID | Who | What | Why |
 |----|-----|------|-----|
-| 3.3.2.1 | As a data scientist | I want to select from built-in aggregation strategies (FedAvg, FedProx) | So that I can choose the best approach for my use case |
+| 3.3.2.1 | As a data scientist | I want to select from built-in aggregation strategies | So that I can choose the best approach for my use case |
 | 3.3.2.2 | As a system architect | I want secure aggregation with differential privacy options | So that individual participant contributions remain private |
 | 3.3.2.3 | As a peer | I want verifiable inclusion of my updates in aggregation | So that I can trust the integrity of the global model |
 
