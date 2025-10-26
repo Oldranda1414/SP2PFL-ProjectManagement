@@ -6,7 +6,7 @@ To kick off the Scoping Phase of the project it is crucial to arrange up Project
 
 Given the nature of the project there are no clients to involve in the Scoping Meetings, so the participants are 'internal' to the company.
 
-The expected deliverables expected to be produced at the end of the meetings are:
+The deliverables expected to be produced at the end of the meetings are:
 
 - List of Conditions of Satisfaction (CoS)
 - Requirements Definition

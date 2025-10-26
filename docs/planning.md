@@ -1,4 +1,4 @@
-Once the POS is accepted, the planning phase can start.
+Once the POS is approved, the Planning phase can start.
 
 ## Joint Project Planning Sessions
 
@@ -14,23 +14,32 @@ The PM schedules and organizes the meetings deciding:
 
 The following Agenda will be carried out throughout the JPPSs
 
-- Introduction of attendees
-- Introduction of project
-- Introduction of the Agenda
-- Generation of Work Breakdown Structure
-- Generation of Dependency Diagram
-- Generation of Network Diagram
-- Schedule Compression
-- Risk Assessment
-- Writing of Project Proposal
+1. Introduction
+    - Introduction of attendees
+    - Introduction of project
+    - Introduction of the agenda
+2. Project Analysis
+    - Develop of Work Breakdown Structure
+    - Construct of Dependency Diagram
+    - Construct of Network Diagram
+    - Schedule Compression
+3. Risk and Resource Planning
+    - Risk Assessment
+    - Resource Allocation
+4. Documentation
+    - Draft of Project Definition Statement
+    - Writing of Project Proposal
+    - Summarise Project Notebook
 
 ### Deliverables
+
+The deliverables expected to be produced at the end of the meetings are:
 
 - Project Definition Statement (PDS)
 - Work Breakdown Structure (WBS)
 - Required Resources
 - Resource Allocation
-- Compute Activity Duration
+- Estimate Activity Duration
 - Project Network Schedule
 - Activity Scheduling
 - Project Notebook
