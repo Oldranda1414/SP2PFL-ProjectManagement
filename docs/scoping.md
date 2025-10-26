@@ -625,30 +625,66 @@ Given the Secure Average Computation algorithm proposed in \[[Wink et al., 2021]
 
 ### Goal
 
-Create and provide a SAAS Framework called Tyr Framework that allows companies and organization to use the Secure Average Computation (TODO finish this)
+Create and provide a SAAS Framework called Tyr Framework that allows client companies and organization to use the Secure Average Computation algorithm for a Distributed Federated Learning application.
+
+The framework should offer a simple API and scalable architecture, allowing OpenML clients to easily collaborate on shared ML model training without exposing sensitive data.
 
 ### Objectives
 
+1. Implement framework API and algorithm
+2. Implement communication protocols, ensuring compliance with data protection standards (e.g. GDPR)
+3. Implement Web-based dashboard to manage Distributed Federated Learning
+4. Identify pilot customers among OpenML’s enterprise clients
+5. Launch marketing and outreach campaigns highlighting privacy-preserving collaboration
+
 ### Success Criteria
+
+1. Successfull implementation of Secure Average Computation protocol, validated by internal benchmarks
+2. Achievement of technical performance targets (scalability, latency, and fault tolerance)
+3. Completion of a pilot deployment involving at least 3 independent organizations with verified results
+4. Positive customer feedback and satisfaction (Net Promoter Score > 7)
 
 ### A/R/O
 
 #### Assuptions
 
+1. The algorithm by \[[Wink et al., 2021][1]\] is feasible to implement in production environments
+2. Competing companies are open and interested into participating in federated experiments
+
 #### Risks
 
+1. Delays in development due to the novelty and complexity of the protocol
+2. Potential security vulnerabilities during peer communication
+3. Limited adoption due to lack of client trust in federated systems
+
 #### Obstacles
+
+1. Lack of internal expertise on Secure Distributed Computations
 
 ### SWAT Analysis
 
 #### Strenghts
 
+1. Strong technical background in Machine Learning and API development
+2. Existing client base and SaaS delivery experience
+3. Early mover advantage in commercializing privacy-preserving federated learning
+
 #### Weaknesses
+
+1. Limited company size may constrain development speed
+1. Lack of in-house expertise in advanced cryptography and secure computation
 
 #### Opportunities
 
+1. Rising global demand for privacy-preserving AI solutions
+2. Potential for strategic partnerships with enterprise clients in healthcare
+3. Enhanced reputation as an secure AI leader
+
 #### Threats
 
-TODO check if the POS answers the questions posed on slide 86
+1. Rapid evolution of competitors or open-source federated learning frameworks
+2. Regulatory changes affecting encryption or data-sharing standards
+3. Client unwillingness to cooparate in experimentation
+4. Risk of security breaches undermining client trust
 
 [1]: https://ieeexplore.ieee.org/document/9502443
