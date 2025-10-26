@@ -333,6 +333,16 @@ Given the allocated resources, the following activity durations have been consid
 
 ## Project Network
 
+By identifing activity dependencies and slacks the Project Network Diagram has been produced.
+
+![image](image.csv)
+
+### Gantt
+
+```mermaid
+    gantt
+```
+
 ## Iteration Planning
 
 ## Project Proposal
