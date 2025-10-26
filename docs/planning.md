@@ -43,7 +43,7 @@ The deliverables expected to be produced at the end of the meetings are:
 - Project Network Schedule
 - Activity Scheduling
 - Project Notebook
-- Project proposal
+- Project Proposal
 
 ## Work Breakdown Structure
 
@@ -169,4 +169,185 @@ Since some activities are totally fully they do not have a user story related.
 | 6.6 | Write user documentation and quick-start manuals | 1.1.2.1, 1.1.3.2, 1.1.3.3, 1.2.1.1, 1.2.1.2 |
 | 6.7 | Conduct final validation and acceptance testing | 1.2.2.2 |
 | 6.8 | Prepare lessons learned and project closure report | |
+
+## Resource Allocation
+
+### Human Resources
+
+| Role | Count | Primary Focus Areas |
+|------|-------|---------------------|
+| Project Managers | 1 | Overall coordination, timeline, budget |
+| ML Research Leads | 1 | Research & Design, Algorithm validation |
+| Senior Backend Engineers | 3 | Core Framework, Federation Management |
+| DevOps Engineers | 2 | Infrastructure & Deployment |
+| ML Engineers | 2 | Federated Learning Integration, Model Definition |
+| Frontend Engineers | 2 | User Interface & Experience |
+| QA Engineers | 2 | Quality Assurance & Documentation |
+| Full-stack Engineers | 2 | Model Storage & Inference |
+
+Most roles are covered by at least two employees to enable code review sessions and limit the risk of optimistic predictions.
+
+### Infrastructure & Tools
+
+| Category | Resources | Purpose |
+|----------|-----------|---------|
+| Development | 3x AWS EC2 instances, GitHub Teams | Core development and version control |
+| Testing | Kubernetes cluster, 5x test peer nodes | Integration and federation testing |
+| Staging | Scaled-down production environment | Pre-production validation |
+| Production | Multi-region Kubernetes, 50+ peer capacity | SAAS hosting and client deployments |
+| Monitoring | Prometheus | Performance and security monitoring |
+
+Known tools were preferred to limit employee training necessity.
+
+### Budget Allocation
+
+| Area | Percentage | Description |
+|------|------------|-------------|
+| Personnel | 65% | Salaries for 15-person team |
+| Infrastructure | 20% | Cloud services, development tools |
+| Security & Compliance | 10% | Audits, penetration testing, certifications |
+| Contingency | 5% | Unplanned expenses, scope changes |
+
+Percentage estimations have been aided by past project experience.
+
+## Activity Durations
+
+Given the allocated resources, the following activity durations have been considered.
+
+### Research & Design
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 1.1 | Study and interpret the Secure Average Computation algorithm (Wink et al., 2021) | 3 weeks |
+| 1.3 | Design federated architecture (server–peer topology, communication flow) | 2 weeks |
+| 1.4 | Define security and encryption mechanisms for peer communication | 2 weeks |
+| 1.5 | Define API specifications and endpoints | 3 weeks |
+| 1.6 | Design data schema and metadata format for federated datasets | 2 weeks |
+| 1.7 | Produce software architecture documentation and design diagrams | 1 week |
+| 1.8 | Validate design through technical review | 1 week |
+
+#### Core Framework Development
+
+##### Core
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 2.1.1 | Implement peer registration and authentication subsystem | 4 weeks |
+| 2.1.2 | Develop data preprocessing interface and function library | 3 weeks |
+| 2.1.3 | Implement role and permission management | 5 weeks |
+| 2.1.4 | Implement federated orchestration service (task coordination, scheduling) | 6 weeks |
+| 2.1.5 | Develop Secure Average Computation module | 4 weeks |
+| 2.1.6 | Implement communication protocol for distributed training | 5 weeks |
+| 2.1.7 | Develop API endpoints for peer and admin operations | 6 weeks |
+| 2.1.8 | Integrate monitoring and logging capabilities | 4 weeks |
+| 2.1.9 | Conduct unit and integration testing for modules | 3 weeks |
+
+##### Model Definition & Configuration
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 2.2.1 | Design and implement input schema definition system | 3 weeks |
+| 2.2.2 | Create layer configuration interface (UI and API) | 4 weeks |
+| 2.2.3 | Build supported architectures library and templates | 5 weeks |
+| 2.2.4 | Implement model architecture validation system | 3 weeks |
+| 2.2.5 | Develop custom layer support with sandboxing | 4 weeks |
+| 2.2.6 | Design and implement output schema definition system | 2 weeks |
+| 2.2.7 | Develop model export and serialization capabilities | 4 weeks |
+| 2.2.8 | Implement evaluation and metrics interface | 3 weeks |
+| 2.2.9 | Conduct unit and integration testing for modules | 2 weeks |
+
+##### Federation Management & Security
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 2.3.1 | Implement membership lifecycle management system | 3 weeks |
+| 2.3.2 | Develop secure communication layer with TLS/mTLS | 4 weeks |
+| 2.3.3 | Implement certificate management and auto-renewal | 2 weeks |
+| 2.3.4 | Build authentication and identity management system | 5 weeks |
+| 2.3.5 | Develop fault tolerance and retry mechanisms | 4 weeks |
+| 2.3.6 | Implement aggregation strategy framework | 5 weeks |
+| 2.3.7 | Develop training error handling and recovery system | 4 weeks |
+| 2.3.8 | Conduct unit and integration testing for modules | 2 weeks |
+
+##### Model Storage & Inference
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 2.4.1 | Implement model version control system | 4 weeks |
+| 2.4.2 | Develop model access control and permission system | 3 weeks |
+| 2.4.3 | Implement model integrity verification system | 3 weeks |
+| 2.4.4 | Build inference API service with batch processing | 6 weeks |
+| 2.4.5 | Develop edge deployment and optimization system | 5 weeks |
+| 2.4.6 | Implement performance monitoring and analytics | 4 weeks |
+| 2.4.7 | Develop model update and deployment orchestration | 5 weeks |
+| 2.4.8 | Conduct unit and integration testing for modules | 3 weeks |
+
+### Infrastructure & Deployment
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 3.1 | Configure development and testing environments | 2 weeks |
+| 3.2 | Implement containerization (e.g., Docker) for peer and server components | 3 weeks |
+| 3.3 | Set up orchestration (Kubernetes or similar) | 4 weeks |
+| 3.4 | Create CI/CD pipelines for automated builds and deployment | 3 weeks |
+| 3.5 | Configure cloud infrastructure for distributed experiments | 2 weeks |
+| 3.6 | Establish data privacy and network security policies | 1 week |
+| 3.7 | Deploy framework to production (SAAS hosting) | 2 weeks |
+| 3.8 | Conduct scalability and performance tests | 3 weeks |
+
+### Federated Learning Integration
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 4.1 | Implement model aggregation logic using Secure Average Computation | 4 weeks |
+| 4.2 | Define model update serialization and exchange protocol | 3 weeks |
+| 4.3 | Handle asynchronous peer updates and dropout resilience | 5 weeks |
+| 4.4 | Implement audit trail and logging of training rounds | 2 weeks |
+| 4.5 | Integrate algorithm with orchestration and monitoring services | 4 weeks |
+| 4.6 | Validate model performance and convergence under federation | 3 weeks |
+
+### User Interface & Experience
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 5.1 | Design admin dashboard (federation overview, peer management) | 6 weeks |
+| 5.2 | Design peer organization dashboard (local training, participation status) | 5 weeks |
+| 5.3 | Implement role-based access controls in the UI | 3 weeks |
+| 5.4 | Integrate credential management and registration flows | 2 weeks |
+| 5.5 | Add notifications for federation events and status updates | 2 weeks |
+| 5.6 | Conduct usability testing and collect feedback | 2 weeks |
+| 5.7 | Implement help, documentation, and onboarding pages | 3 weeks |
+
+### Quality Assurance & Documentation
+
+| ID | Activity | Duration Estimate |
+|----|----------|------------------|
+| 6.1 | Develop comprehensive test plan (unit, integration, system, acceptance) | 2 weeks |
+| 6.2 | Perform security and compliance testing | 4 weeks |
+| 6.3 | Conduct performance benchmarking | 3 weeks |
+| 6.4 | Maintain traceability between user stories and test cases | 1 week |
+| 6.5 | Prepare technical documentation (API docs, deployment guide) | 4 weeks |
+| 6.6 | Write user documentation and quick-start manuals | 3 weeks |
+| 6.7 | Conduct final validation and acceptance testing | 2 weeks |
+| 6.8 | Prepare lessons learned and project closure report | 1 week |
+
+## Project Network
+
+## Iteration Planning
+
+## Project Proposal
+
+### Executive Summary
+
+### Background
+
+### Objective
+
+### Overview of Approach
+
+### Detailed Statements of Work
+
+### Risk Analysis
+
+### Time and Cost Summary
 
