@@ -479,7 +479,6 @@ graph TD
     1.6:::research
     1.7:::research
     6.1:::qa
-    6.4:::qa
 
     %% Dependencies
     1.1 --> 1.2
@@ -491,7 +490,6 @@ graph TD
     1.5 --> 1.6
     1.6 --> 1.7
     1.7 --> 6.1
-    6.1 --> 6.4
 
     classDef research fill:#d4e6ff,stroke:#3366cc,stroke-width:2px
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
@@ -573,6 +571,9 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
+    2.1.1:::core
+    2.1.4:::core
+    2.1.5:::core
     2.3.1:::security
     2.3.2:::security
     2.3.3:::security
@@ -581,8 +582,27 @@ graph TD
     2.3.6:::security
     2.3.7:::security
     2.3.8:::security
+    6.4:::qa
     
     %% Dependencies
+    6.4 --> 2.3.2
+    2.1.1 --> 2.3.1
+    2.1.1 --> 2.3.4
+    2.1.4 --> 2.3.5
+    2.1.5 --> 2.3.6
+    2.3.1 --> 2.3.8
+    2.3.2 --> 2.3.3
+    2.3.2 --> 2.3.4
+    2.3.2 --> 2.3.5
+    2.3.3 --> 2.3.8
+    2.3.4 --> 2.3.8
+    2.3.5 --> 2.3.7
+    2.3.6 --> 2.3.7
+    2.3.7 --> 2.3.8
+
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
 #### Model Storage & Inference
@@ -590,6 +610,10 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
+    2.1.3:::core
+    2.1.8:::core
+    2.2.7:::model
+    2.2.8:::model
     2.4.1:::storage
     2.4.2:::storage
     2.4.3:::storage
@@ -599,8 +623,24 @@ graph TD
     2.4.7:::storage
     2.4.8:::storage
 
-
     %% Dependencies
+    2.1.3 --> 2.4.2
+    2.1.8 --> 2.4.6
+    2.2.7 --> 2.4.1
+    2.2.8 --> 2.4.4
+    2.4.1 --> 2.4.2
+    2.4.1 --> 2.4.3
+    2.4.1 --> 2.4.5
+    2.4.2 --> 2.4.8
+    2.4.3 --> 2.4.8
+    2.4.4 --> 2.4.6
+    2.4.5 --> 2.4.7
+    2.4.6 --> 2.4.8
+    2.4.7 --> 2.4.8
+
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
+    classDef storage fill:#e6f7f0,stroke:#45a08c,stroke-width:2px
 ```
 
 #### Infrastructure & Deployment
@@ -608,8 +648,30 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
+    3.1:::infra
+    3.2:::infra
+    3.3:::infra
+    3.4:::infra
+    3.5:::infra
+    3.6:::infra
+    3.7:::infra
+    3.8:::infra
+    6.4:::qa
 
     %% Dependencies
+    6.4 --> 3.1
+    6.4 --> 3.6
+    3.1 --> 3.2
+    3.2 --> 3.3
+    3.3 --> 3.4
+    3.3 --> 3.5
+    3.4 --> 3.7
+    3.5 --> 3.7
+    3.6 --> 3.7
+    3.7 --> 3.8
+
+    classDef infra fill:#fff2cc,stroke:#e6ac00,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
 #### Federated Learning Integration
@@ -617,8 +679,33 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
-
+    2.1.4:::core
+    2.1.5:::core
+    2.1.6:::core
+    2.1.8:::core
+    2.2.7:::model
+    2.3.5:::security
+    2.3.6:::security
+    4.1:::fl
+    4.2:::fl
+    4.3:::fl
+    4.4:::fl
+    4.5:::fl
+    4.6:::fl
+    
     %% Dependencies
+    2.1.4 --> 4.5
+    2.1.5 --> 4.1
+    2.1.6 --> 4.2
+    2.1.8 --> 4.4
+    2.2.7 --> 4.2
+    2.3.5 --> 4.3
+    2.3.6 --> 4.1
+
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
+    classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
+    classDef fl fill:#e6e6ff,stroke:#6666ff,stroke-width:2px
 ```
 
 #### User Interface & Experience
@@ -626,8 +713,33 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
+    2.1.3:::core
+    2.1.4:::core
+    2.1.7:::core
+    2.1.8:::core
+    2.2.2:::model
+    2.3.4:::security
+    5.1:::ui
+    5.2:::ui
+    5.3:::ui
+    5.4:::ui
+    5.5:::ui
+    5.6:::ui
+    5.7:::ui
 
     %% Dependencies
+    2.1.4 --> 5.3
+    2.1.4 --> 5.1
+    2.1.7 --> 5.1
+    2.1.7 --> 5.2
+    2.1.8 --> 5.5
+    2.2.2 --> 5.2
+    2.3.4 --> 5.4
+
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
+    classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
+    classDef ui fill:#ffe6f2,stroke:#cc66a3,stroke-width:2px
 ```
 
 #### Quality Assurance & Documentation
@@ -635,8 +747,53 @@ graph TD
 ```mermaid
 graph TD
     %% Activities
-
+    1.7:::research
+    2.1.9:::core
+    2.2.9:::model
+    2.3.8:::security
+    2.4.8:::storage
+    3.7:::infra
+    3.8:::infra
+    4.6:::fl
+    5.7:::ui
+    6.1:::qa
+    6.2:::qa
+    6.3:::qa
+    6.4:::qa
+    6.5:::qa
+    6.6:::qa
+    6.7:::qa
+    6.8:::qa
+    
     %% Dependencies
+    1.7 --> 6.1
+    6.1 --> 6.4
+
+    2.1.9 --> 6.5
+    2.2.9 --> 6.5
+    2.3.8 --> 6.2
+    2.3.8 --> 6.5
+    2.4.8 --> 6.5
+    3.7 --> 6.2
+    3.7 --> 6.5
+    3.8 --> 6.3
+    4.6 --> 6.3
+    5.7 --> 6.6
+    6.2 --> 6.7
+    6.3 --> 6.7
+    6.5 --> 6.6
+    6.6 --> 6.7
+    6.7 --> 6.8
+
+    classDef research fill:#d4e6ff,stroke:#3366cc,stroke-width:2px
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
+    classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
+    classDef storage fill:#e6f7f0,stroke:#45a08c,stroke-width:2px
+    classDef infra fill:#fff2cc,stroke:#e6ac00,stroke-width:2px
+    classDef fl fill:#e6e6ff,stroke:#6666ff,stroke-width:2px
+    classDef ui fill:#ffe6f2,stroke:#cc66a3,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
 #### Full Diagram
