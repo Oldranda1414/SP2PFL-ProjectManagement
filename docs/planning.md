@@ -335,7 +335,7 @@ Given the allocated resources, the following activity durations have been consid
 | 6.7 | Conduct final validation and acceptance testing | 2 weeks |
 | 6.8 | Prepare lessons learned and project closure report | 1 week |
 
-## Project Network
+## Project Activity Network
 
 To determine the critical path and Gantt chart a project network diagram must be constructed.
 
@@ -462,7 +462,185 @@ Dependencies between activities where identified:
 
 By considering activity dependencies and slacks the Project Network Diagram has been produced.
 
-NOTE due to the rendering engine the graph is best seen in light mode
+### Project Network Diagram
+
+NOTE Due to the rendering engine the following graphs are best seen in light mode.
+
+#### Research & Design
+
+```mermaid
+graph TD
+    %% Activities
+    1.1:::research
+    1.2:::research
+    1.3:::research
+    1.4:::research
+    1.5:::research
+    1.6:::research
+    1.7:::research
+    6.1:::qa
+    6.4:::qa
+
+    %% Dependencies
+    1.1 --> 1.2
+    1.2 --> 1.3
+    1.2 --> 1.4
+    1.2 --> 1.5
+    1.3 --> 1.6
+    1.4 --> 1.6
+    1.5 --> 1.6
+    1.6 --> 1.7
+    1.7 --> 6.1
+    6.1 --> 6.4
+
+    classDef research fill:#d4e6ff,stroke:#3366cc,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
+```
+
+#### Core
+
+```mermaid
+graph TD
+    %% Activities
+    2.1.1:::core
+    2.1.2:::core
+    2.1.3:::core
+    2.1.4:::core
+    2.1.5:::core
+    2.1.6:::core
+    2.1.7:::core
+    2.1.8:::core
+    2.1.9:::core
+    6.4:::qa
+
+    %% Dependencies
+    6.4 --> 2.1.1
+    6.4 --> 2.1.2
+    6.4 --> 2.1.5
+    6.4 --> 2.1.6
+    
+    2.1.1 --> 2.1.3
+    2.1.1 --> 2.1.4
+    2.1.3 --> 2.1.7
+    2.1.2 --> 2.1.9
+    2.1.4 --> 2.1.8
+    2.1.5 --> 2.1.9
+    2.1.6 --> 2.1.8
+    2.1.7 --> 2.1.9
+    2.1.8 --> 2.1.9
+
+    classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
+```
+
+#### Model Definition & Configuration
+
+```mermaid
+graph TD
+    %% Activities
+    2.2.1:::model
+    2.2.2:::model
+    2.2.3:::model
+    2.2.4:::model
+    2.2.5:::model
+    2.2.6:::model
+    2.2.7:::model
+    2.2.8:::model
+    2.2.9:::model
+    6.4:::qa
+
+    %% Dependencies
+    6.4 --> 2.2.1
+    2.2.1 --> 2.2.2
+    2.2.1 --> 2.2.3
+    2.2.1 --> 2.2.6
+    2.2.2 --> 2.2.4
+    2.2.3 --> 2.2.4
+    2.2.4 --> 2.2.5
+    2.2.4 --> 2.2.7
+    2.2.5 --> 2.2.9
+    2.2.6 --> 2.2.7
+    2.2.6 --> 2.2.8
+    2.2.7 --> 2.2.9
+    2.2.8 --> 2.2.9
+
+    classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
+    classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
+```
+
+#### Federation Management & Security
+
+```mermaid
+graph TD
+    %% Activities
+    2.3.1:::security
+    2.3.2:::security
+    2.3.3:::security
+    2.3.4:::security
+    2.3.5:::security
+    2.3.6:::security
+    2.3.7:::security
+    2.3.8:::security
+    
+    %% Dependencies
+```
+
+#### Model Storage & Inference
+
+```mermaid
+graph TD
+    %% Activities
+    2.4.1:::storage
+    2.4.2:::storage
+    2.4.3:::storage
+    2.4.4:::storage
+    2.4.5:::storage
+    2.4.6:::storage
+    2.4.7:::storage
+    2.4.8:::storage
+
+
+    %% Dependencies
+```
+
+#### Infrastructure & Deployment
+
+```mermaid
+graph TD
+    %% Activities
+
+    %% Dependencies
+```
+
+#### Federated Learning Integration
+
+```mermaid
+graph TD
+    %% Activities
+
+    %% Dependencies
+```
+
+#### User Interface & Experience
+
+```mermaid
+graph TD
+    %% Activities
+
+    %% Dependencies
+```
+
+#### Quality Assurance & Documentation
+
+```mermaid
+graph TD
+    %% Activities
+
+    %% Dependencies
+```
+
+#### Full Diagram
+
 
 ```mermaid
 graph TD
