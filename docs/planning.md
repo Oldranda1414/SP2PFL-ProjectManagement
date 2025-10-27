@@ -337,9 +337,13 @@ Given the allocated resources, the following activity durations have been consid
 
 ## Project Network
 
+To determine the critical path and Gantt chart a project network diagram must be constructed.
+
+### Dependencies
+
 Dependencies between activities where identified:
 
-### Research & Design
+#### Research & Design
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -351,9 +355,9 @@ Dependencies between activities where identified:
 | 1.6 | Produce software architecture documentation and design diagrams | 1.3, 1.4, 1.5 |
 | 1.7 | Validate design through technical review | 1.6 |
 
-### Core Framework Development
+#### Core Framework Development
 
-#### Core
+##### Core
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -365,9 +369,9 @@ Dependencies between activities where identified:
 | 2.1.6 | Implement communication protocol for distributed training | 6.4 |
 | 2.1.7 | Develop API endpoints for peer and admin operations | 2.1.3 |
 | 2.1.8 | Integrate monitoring and logging capabilities | 2.1.4, 2.1.6 |
-| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.5, 2.1.8 |
+| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.5, 2.1.7, 2.1.8 |
 
-#### Model Definition & Configuration
+##### Model Definition & Configuration
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -381,7 +385,7 @@ Dependencies between activities where identified:
 | 2.2.8 | Implement evaluation and metrics interface | 2.2.6 |
 | 2.2.9 | Conduct unit and integration testing for modules | 2.2.5, 2.2.7, 2.2.8 |
 
-#### Federation Management & Security
+##### Federation Management & Security
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -394,7 +398,7 @@ Dependencies between activities where identified:
 | 2.3.7 | Develop training error handling and recovery system | 2.3.5, 2.3.6 |
 | 2.3.8 | Conduct unit and integration testing for modules | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
 
-#### Model Storage & Inference
+##### Model Storage & Inference
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -407,7 +411,7 @@ Dependencies between activities where identified:
 | 2.4.7 | Develop model update and deployment orchestration | 2.4.1, 2.4.5 |
 | 2.4.8 | Conduct unit and integration testing for modules | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
 
-### Infrastructure & Deployment
+#### Infrastructure & Deployment
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -420,7 +424,7 @@ Dependencies between activities where identified:
 | 3.7 | Deploy framework to production (SAAS hosting) | 3.4, 3.5, 3.6 |
 | 3.8 | Conduct scalability and performance tests | 3.7 |
 
-### Federated Learning Integration
+#### Federated Learning Integration
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -431,7 +435,7 @@ Dependencies between activities where identified:
 | 4.5 | Integrate algorithm with orchestration and monitoring services | 2.1.4, 4.4 |
 | 4.6 | Validate model performance and convergence under federation | 4.5 |
 
-### User Interface & Experience
+#### User Interface & Experience
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -443,7 +447,7 @@ Dependencies between activities where identified:
 | 5.6 | Conduct usability testing and collect feedback | 5.3, 5.4, 5.5 |
 | 5.7 | Implement help, documentation, and onboarding pages | 5.6 |
 
-### Quality Assurance & Documentation
+#### Quality Assurance & Documentation
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
@@ -578,18 +582,22 @@ graph TD
     2.1.1 --> 2.3.1
     2.1.1 --> 2.3.4
     2.1.3 --> 2.1.7
+    2.1.2 --> 2.1.9
     2.1.3 --> 2.4.2
     2.1.3 --> 5.3
     2.1.4 --> 2.1.8
     2.1.4 --> 2.3.5
     2.1.4 --> 4.5
     2.1.4 --> 5.1
+    2.1.5 --> 2.1.9
     2.1.5 --> 2.3.6
     2.1.5 --> 4.1
     2.1.6 --> 2.1.8
     2.1.6 --> 4.2
+    2.1.7 --> 2.1.9
     2.1.7 --> 5.1
     2.1.7 --> 5.2
+    2.1.8 --> 2.1.9
     2.1.8 --> 2.4.6
     2.1.8 --> 4.4
     2.1.8 --> 5.5
@@ -603,28 +611,40 @@ graph TD
     2.2.3 --> 2.2.4
     2.2.4 --> 2.2.5
     2.2.4 --> 2.2.7
+    2.2.5 --> 2.2.9
     2.2.6 --> 2.2.7
     2.2.6 --> 2.2.8
+    2.2.7 --> 2.2.9
     2.2.7 --> 2.4.1
     2.2.7 --> 2.4.4
     2.2.7 --> 4.2
+    2.2.8 --> 2.2.9
     2.2.8 --> 2.4.4
     
     %%% Federation Management Dependencies
+    2.3.1 --> 2.3.8
     2.3.2 --> 2.3.3
     2.3.2 --> 2.3.4
     2.3.2 --> 2.3.5
+    2.3.3 --> 2.3.8
+    2.3.4 --> 2.3.8
     2.3.4 --> 5.4
     2.3.5 --> 2.3.7
     2.3.5 --> 4.3
     2.3.6 --> 2.3.7
     2.3.6 --> 4.1
+    2.3.7 --> 2.3.8
     
     %%% Model Storage Dependencies
     2.4.1 --> 2.4.2
     2.4.1 --> 2.4.3
     2.4.1 --> 2.4.5
-    2.4.1 --> 2.4.7
+    2.4.2 --> 2.4.8
+    2.4.3 --> 2.4.8
+    2.4.4 --> 2.4.6
+    2.4.5 --> 2.4.7
+    2.4.6 --> 2.4.8
+    2.4.7 --> 2.4.8
     
     %%% Infrastructure Dependencies
     3.1 --> 3.2
@@ -637,6 +657,7 @@ graph TD
     3.7 --> 3.8
     3.7 --> 6.2
     3.7 --> 6.5
+    3.8 --> 6.3
     
     %%% Federated Learning Dependencies
     4.1 --> 4.3
@@ -645,7 +666,6 @@ graph TD
     4.4 --> 4.5
     4.5 --> 4.6
     4.6 --> 6.3
-    3.8 --> 6.3
     
     %%% UI/UX Dependencies
     5.1 --> 5.3
