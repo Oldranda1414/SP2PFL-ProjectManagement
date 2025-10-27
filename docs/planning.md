@@ -348,7 +348,7 @@ Dependencies between activities where identified:
 | 1.3 | Define security and encryption mechanisms for peer communication | 1.2 |
 | 1.4 | Define API specifications and endpoints | 1.2 |
 | 1.5 | Design data schema and metadata format for federated datasets | 1.2 |
-| 1.6 | Produce software architecture documentation and design diagrams | 1.2, 1.3, 1.4, 1.5 |
+| 1.6 | Produce software architecture documentation and design diagrams | 1.3, 1.4, 1.5 |
 | 1.7 | Validate design through technical review | 1.6 |
 
 ### Core Framework Development
@@ -357,21 +357,21 @@ Dependencies between activities where identified:
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
-| 2.1.1 | Implement peer registration and authentication subsystem | 1.7 |
-| 2.1.2 | Develop data preprocessing interface and function library | 1.7 |
+| 2.1.1 | Implement peer registration and authentication subsystem | 6.4 |
+| 2.1.2 | Develop data preprocessing interface and function library | 6.4 |
 | 2.1.3 | Implement role and permission management | 2.1.1 |
-| 2.1.4 | Implement federated orchestration service | 1.7, 2.1.1 |
-| 2.1.5 | Develop Secure Average Computation module | 1.1, 1.7 |
-| 2.1.6 | Implement communication protocol for distributed training | 1.3, 1.7 |
-| 2.1.7 | Develop API endpoints for peer and admin operations | 1.4, 2.1.1, 2.1.3 |
+| 2.1.4 | Implement federated orchestration service | 2.1.1 |
+| 2.1.5 | Develop Secure Average Computation module | 6.4 |
+| 2.1.6 | Implement communication protocol for distributed training | 6.4 |
+| 2.1.7 | Develop API endpoints for peer and admin operations | 2.1.3 |
 | 2.1.8 | Integrate monitoring and logging capabilities | 2.1.4, 2.1.6 |
-| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6, 2.1.7, 2.1.8 |
+| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.5, 2.1.8 |
 
 #### Model Definition & Configuration
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
-| 2.2.1 | Design and implement input schema definition system | 1.5, 1.7 |
+| 2.2.1 | Design and implement input schema definition system | 6.4 |
 | 2.2.2 | Create layer configuration interface (UI and API) | 2.2.1 |
 | 2.2.3 | Build supported architectures library and templates | 2.2.1 |
 | 2.2.4 | Implement model architecture validation system | 2.2.2, 2.2.3 |
@@ -379,20 +379,20 @@ Dependencies between activities where identified:
 | 2.2.6 | Design and implement output schema definition system | 2.2.1 |
 | 2.2.7 | Develop model export and serialization capabilities | 2.2.4, 2.2.6 |
 | 2.2.8 | Implement evaluation and metrics interface | 2.2.6 |
-| 2.2.9 | Conduct unit and integration testing for modules | 2.2.4, 2.2.5, 2.2.7, 2.2.8 |
+| 2.2.9 | Conduct unit and integration testing for modules | 2.2.5, 2.2.7, 2.2.8 |
 
 #### Federation Management & Security
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
 | 2.3.1 | Implement membership lifecycle management system | 2.1.1 |
-| 2.3.2 | Develop secure communication layer with TLS/mTLS | 1.3, 1.7 |
+| 2.3.2 | Develop secure communication layer with TLS/mTLS | 6.4 |
 | 2.3.3 | Implement certificate management and auto-renewal | 2.3.2 |
 | 2.3.4 | Build authentication and identity management system | 2.1.1, 2.3.2 |
 | 2.3.5 | Develop fault tolerance and retry mechanisms | 2.1.4, 2.3.2 |
 | 2.3.6 | Implement aggregation strategy framework | 2.1.5 |
 | 2.3.7 | Develop training error handling and recovery system | 2.3.5, 2.3.6 |
-| 2.3.8 | Conduct unit and integration testing for modules | 2.3.1, 2.3.3, 2.3.4, 2.3.5, 2.3.6, 2.3.7 |
+| 2.3.8 | Conduct unit and integration testing for modules | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
 
 #### Model Storage & Inference
 
@@ -405,18 +405,18 @@ Dependencies between activities where identified:
 | 2.4.5 | Develop edge deployment and optimization system | 2.4.1 |
 | 2.4.6 | Implement performance monitoring and analytics | 2.1.8, 2.4.4 |
 | 2.4.7 | Develop model update and deployment orchestration | 2.4.1, 2.4.5 |
-| 2.4.8 | Conduct unit and integration testing for modules | 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7 |
+| 2.4.8 | Conduct unit and integration testing for modules | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
 
 ### Infrastructure & Deployment
 
 | ID | Activity | Dependencies |
 |----|----------|--------------|
-| 3.1 | Configure development and testing environments | 1.7 |
+| 3.1 | Configure development and testing environments | 6.4 |
 | 3.2 | Implement containerization for peer and server components | 3.1 |
 | 3.3 | Set up orchestration (Kubernetes or similar) | 3.2 |
 | 3.4 | Create CI/CD pipelines for automated builds and deployment | 3.3 |
 | 3.5 | Configure cloud infrastructure for distributed experiments | 3.3 |
-| 3.6 | Establish data privacy and network security policies | 1.3, 1.7 |
+| 3.6 | Establish data privacy and network security policies | 6.4 |
 | 3.7 | Deploy framework to production (SAAS hosting) | 3.4, 3.5, 3.6 |
 | 3.8 | Conduct scalability and performance tests | 3.7 |
 
@@ -428,7 +428,7 @@ Dependencies between activities where identified:
 | 4.2 | Define model update serialization and exchange protocol | 2.2.7, 2.1.6 |
 | 4.3 | Handle asynchronous peer updates and dropout resilience | 2.3.5, 4.1, 4.2 |
 | 4.4 | Implement audit trail and logging of training rounds | 2.1.8, 4.3 |
-| 4.5 | Integrate algorithm with orchestration and monitoring services | 2.1.4, 4.3, 4.4 |
+| 4.5 | Integrate algorithm with orchestration and monitoring services | 2.1.4, 4.4 |
 | 4.6 | Validate model performance and convergence under federation | 4.5 |
 
 ### User Interface & Experience
@@ -457,6 +457,8 @@ Dependencies between activities where identified:
 | 6.8 | Prepare lessons learned and project closure report | 6.7 |
 
 By considering activity dependencies and slacks the Project Network Diagram has been produced.
+
+NOTE due to the rendering engine the graph is best seen in light mode
 
 ```mermaid
 graph TD
