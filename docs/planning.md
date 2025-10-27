@@ -701,6 +701,11 @@ graph TD
     2.2.7 --> 4.2
     2.3.5 --> 4.3
     2.3.6 --> 4.1
+    4.1 --> 4.3
+    4.2 --> 4.3
+    4.3 --> 4.4
+    4.4 --> 4.5
+    4.5 --> 4.6
 
     classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
     classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
@@ -735,6 +740,18 @@ graph TD
     2.1.8 --> 5.5
     2.2.2 --> 5.2
     2.3.4 --> 5.4
+    5.1 --> 5.3
+    5.1 --> 5.4
+    5.1 --> 5.5
+    5.2 --> 5.3
+    5.2 --> 5.4
+    5.2 --> 5.5
+    5.3 --> 5.6
+    5.4 --> 5.6
+    5.5 --> 5.6
+    5.6 --> 5.7
+    
+    %%% UI/UX Dependencies
 
     classDef core fill:#d4f7d4,stroke:#2d862d,stroke-width:2px
     classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
