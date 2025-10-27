@@ -495,6 +495,12 @@ graph TD
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
+The Critical Path for these activities is:
+
+**1.1 --> 1.2 --> 1.4 --> 1.6 --> 1.7**
+
+This path has an estimated total duration of 11 weeks.
+
 #### Core
 
 ```mermaid
@@ -531,6 +537,12 @@ graph TD
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
+
 #### Model Definition & Configuration
 
 ```mermaid
@@ -565,6 +577,12 @@ graph TD
     classDef model fill:#e6f7e6,stroke:#45a045,stroke-width:2px
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
+
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
 
 #### Federation Management & Security
 
@@ -605,6 +623,12 @@ graph TD
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
 
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
+
 #### Model Storage & Inference
 
 ```mermaid
@@ -643,6 +667,12 @@ graph TD
     classDef storage fill:#e6f7f0,stroke:#45a08c,stroke-width:2px
 ```
 
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
+
 #### Infrastructure & Deployment
 
 ```mermaid
@@ -673,6 +703,12 @@ graph TD
     classDef infra fill:#fff2cc,stroke:#e6ac00,stroke-width:2px
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
+
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
 
 #### Federated Learning Integration
 
@@ -712,6 +748,12 @@ graph TD
     classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
     classDef fl fill:#e6e6ff,stroke:#6666ff,stroke-width:2px
 ```
+
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
 
 #### User Interface & Experience
 
@@ -759,6 +801,12 @@ graph TD
     classDef security fill:#f0f7e6,stroke:#8cb84d,stroke-width:2px
     classDef ui fill:#ffe6f2,stroke:#cc66a3,stroke-width:2px
 ```
+
+The Critical Path for these activities is:
+
+****
+
+This path has an estimated total duration of weeks.
 
 #### Quality Assurance & Documentation
 
@@ -813,6 +861,20 @@ graph TD
     classDef ui fill:#ffe6f2,stroke:#cc66a3,stroke-width:2px
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
+
+These activities are cleanly divided into two graphs.
+
+The Critical Path for the first and bigger graph is:
+
+**6.5 --> 6.6 --> 6.7 --> 6.8**
+
+This path has an estimated total duration of 11 weeks.
+
+The Critical Path for the second graph is the only path:
+
+**6.1 --> 6.4**
+
+This path has an estimated total duration of 3 weeks.
 
 #### Full Diagram
 
