@@ -2,13 +2,17 @@ Once the POS is approved, the Planning phase can start.
 
 ## Joint Project Planning Sessions
 
-Joint Project Planning Sessions (JPPS) are scheduled. The entire development team and project manager will partecipate to these meetings.
+Joint Project Planning Sessions (JPPSs) are scheduled. The entire development team and project manager will partecipate to these meetings.
 
 The PM schedules and organizes the meetings deciding:
 
-- Attendees: The entire development team (10 members), Finance Manager, Customer Experience Analyst and the PM himself
-- Facilities: The meeting room in OpenML offices is spacious enough for the JPPS to take place
-- Equipment: The meeting room provides a wide round table with enough seats for all attendees. Office laptops and pen and paper will be provided
+- Attendees:
+    - The entire development team (14 members), Finance Manager, Customer Experience Analyst and the PM himself
+- Facilities:
+    - The meeting room in OpenML offices is spacious enough for the JPPSs to take place
+- Equipment:
+    - The meeting room provides a wide round table with enough seats for all attendees
+    - Office laptops and pen and paper will be provided
 
 ### Agenda
 
@@ -58,12 +62,12 @@ Since some activities are totally fully they do not have a user story related.
 | ID | Activity | Related User Stories |
 |----|----------|----------------------|
 | 1.1 | Study and interpret the Secure Average Computation algorithm (Wink et al., 2021) | 3.3.2.1 |
-| 1.3 | Design federated architecture (server–peer topology, communication flow) | 3.3.1.2 |
-| 1.4 | Define security and encryption mechanisms for peer communication | 3.2.1.1, 3.2.1.2, 3.2.1.3 |
-| 1.5 | Define API specifications and endpoints | 1.1.3.1, 3.1.1.3, 3.1.3.2, 3.1.4.4, 3.3.1.6, 3.3.3.4, 4.2.1.1 |
-| 1.6 | Design data schema and metadata format for federated datasets | 2.1.1.1, 2.1.1.2, 2.1.3.2 |
-| 1.7 | Produce software architecture documentation and design diagrams | |
-| 1.8 | Validate design through technical review | |
+| 1.2 | Design federated architecture (server–peer topology, communication flow) | 3.3.1.2 |
+| 1.3 | Define security and encryption mechanisms for peer communication | 3.2.1.1, 3.2.1.2, 3.2.1.3 |
+| 1.4 | Define API specifications and endpoints | 1.1.3.1, 3.1.1.3, 3.1.3.2, 3.1.4.4, 3.3.1.6, 3.3.3.4, 4.2.1.1 |
+| 1.5 | Design data schema and metadata format for federated datasets | 2.1.1.1, 2.1.1.2, 2.1.3.2 |
+| 1.6 | Produce software architecture documentation and design diagrams | |
+| 1.7 | Validate design through technical review | |
 
 ### Core Framework Development
 
@@ -177,8 +181,8 @@ Since some activities are totally fully they do not have a user story related.
 | Role | Count | Primary Focus Areas |
 |------|-------|---------------------|
 | Project Managers | 1 | Overall coordination, timeline, budget |
-| ML Research Leads | 1 | Research & Design, Algorithm validation |
-| Senior Backend Engineers | 3 | Core Framework, Federation Management |
+| ML Research Leads | 2 | Research & Design, Algorithm validation |
+| Senior Backend Engineers | 2 | Core Framework, Federation Management |
 | DevOps Engineers | 2 | Infrastructure & Deployment |
 | ML Engineers | 2 | Federated Learning Integration, Model Definition |
 | Frontend Engineers | 2 | User Interface & Experience |
@@ -219,16 +223,16 @@ Given the allocated resources, the following activity durations have been consid
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
 | 1.1 | Study and interpret the Secure Average Computation algorithm (Wink et al., 2021) | 3 weeks |
-| 1.3 | Design federated architecture (server–peer topology, communication flow) | 2 weeks |
-| 1.4 | Define security and encryption mechanisms for peer communication | 2 weeks |
-| 1.5 | Define API specifications and endpoints | 3 weeks |
-| 1.6 | Design data schema and metadata format for federated datasets | 2 weeks |
-| 1.7 | Produce software architecture documentation and design diagrams | 1 week |
-| 1.8 | Validate design through technical review | 1 week |
+| 1.2 | Design federated architecture | 2 weeks |
+| 1.3 | Define security and encryption mechanisms for peer communication | 2 weeks |
+| 1.4 | Define API specifications and endpoints | 3 weeks |
+| 1.5 | Design data schema and metadata format for federated datasets | 2 weeks |
+| 1.6 | Produce software architecture documentation and design diagrams | 1 week |
+| 1.7 | Validate design through technical review | 1 week |
 
-#### Core Framework Development
+### Core Framework Development
 
-##### Core
+#### Core
 
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
@@ -242,7 +246,7 @@ Given the allocated resources, the following activity durations have been consid
 | 2.1.8 | Integrate monitoring and logging capabilities | 4 weeks |
 | 2.1.9 | Conduct unit and integration testing for modules | 3 weeks |
 
-##### Model Definition & Configuration
+#### Model Definition & Configuration
 
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
@@ -256,7 +260,7 @@ Given the allocated resources, the following activity durations have been consid
 | 2.2.8 | Implement evaluation and metrics interface | 3 weeks |
 | 2.2.9 | Conduct unit and integration testing for modules | 2 weeks |
 
-##### Federation Management & Security
+#### Federation Management & Security
 
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
@@ -269,7 +273,7 @@ Given the allocated resources, the following activity durations have been consid
 | 2.3.7 | Develop training error handling and recovery system | 4 weeks |
 | 2.3.8 | Conduct unit and integration testing for modules | 2 weeks |
 
-##### Model Storage & Inference
+#### Model Storage & Inference
 
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
@@ -333,9 +337,251 @@ Given the allocated resources, the following activity durations have been consid
 
 ## Project Network
 
-By identifing activity dependencies and slacks the Project Network Diagram has been produced.
+Dependencies between activities where identified:
 
-![image](image.csv)
+### Research & Design
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 1.1 | Study and interpret the Secure Average Computation algorithm | - |
+| 1.2 | Design federated architecture | 1.1 |
+| 1.3 | Define security and encryption mechanisms for peer communication | 1.2 |
+| 1.4 | Define API specifications and endpoints | 1.2 |
+| 1.5 | Design data schema and metadata format for federated datasets | 1.2 |
+| 1.6 | Produce software architecture documentation and design diagrams | 1.2, 1.3, 1.4, 1.5 |
+| 1.7 | Validate design through technical review | 1.6 |
+
+### Core Framework Development
+
+#### Core
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 2.1.1 | Implement peer registration and authentication subsystem | 1.7 |
+| 2.1.2 | Develop data preprocessing interface and function library | 1.7 |
+| 2.1.3 | Implement role and permission management | 2.1.1 |
+| 2.1.4 | Implement federated orchestration service | 1.7, 2.1.1 |
+| 2.1.5 | Develop Secure Average Computation module | 1.1, 1.7 |
+| 2.1.6 | Implement communication protocol for distributed training | 1.3, 1.7 |
+| 2.1.7 | Develop API endpoints for peer and admin operations | 1.4, 2.1.1, 2.1.3 |
+| 2.1.8 | Integrate monitoring and logging capabilities | 2.1.4, 2.1.6 |
+| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.6, 2.1.7, 2.1.8 |
+
+#### Model Definition & Configuration
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 2.2.1 | Design and implement input schema definition system | 1.5, 1.7 |
+| 2.2.2 | Create layer configuration interface (UI and API) | 2.2.1 |
+| 2.2.3 | Build supported architectures library and templates | 2.2.1 |
+| 2.2.4 | Implement model architecture validation system | 2.2.2, 2.2.3 |
+| 2.2.5 | Develop custom layer support with sandboxing | 2.2.4 |
+| 2.2.6 | Design and implement output schema definition system | 2.2.1 |
+| 2.2.7 | Develop model export and serialization capabilities | 2.2.4, 2.2.6 |
+| 2.2.8 | Implement evaluation and metrics interface | 2.2.6 |
+| 2.2.9 | Conduct unit and integration testing for modules | 2.2.4, 2.2.5, 2.2.7, 2.2.8 |
+
+#### Federation Management & Security
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 2.3.1 | Implement membership lifecycle management system | 2.1.1 |
+| 2.3.2 | Develop secure communication layer with TLS/mTLS | 1.3, 1.7 |
+| 2.3.3 | Implement certificate management and auto-renewal | 2.3.2 |
+| 2.3.4 | Build authentication and identity management system | 2.1.1, 2.3.2 |
+| 2.3.5 | Develop fault tolerance and retry mechanisms | 2.1.4, 2.3.2 |
+| 2.3.6 | Implement aggregation strategy framework | 2.1.5 |
+| 2.3.7 | Develop training error handling and recovery system | 2.3.5, 2.3.6 |
+| 2.3.8 | Conduct unit and integration testing for modules | 2.3.1, 2.3.3, 2.3.4, 2.3.5, 2.3.6, 2.3.7 |
+
+#### Model Storage & Inference
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 2.4.1 | Implement model version control system | 2.2.7 |
+| 2.4.2 | Develop model access control and permission system | 2.1.3, 2.4.1 |
+| 2.4.3 | Implement model integrity verification system | 2.4.1 |
+| 2.4.4 | Build inference API service with batch processing | 2.2.7, 2.2.8 |
+| 2.4.5 | Develop edge deployment and optimization system | 2.4.1 |
+| 2.4.6 | Implement performance monitoring and analytics | 2.1.8, 2.4.4 |
+| 2.4.7 | Develop model update and deployment orchestration | 2.4.1, 2.4.5 |
+| 2.4.8 | Conduct unit and integration testing for modules | 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7 |
+
+### Infrastructure & Deployment
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 3.1 | Configure development and testing environments | 1.7 |
+| 3.2 | Implement containerization for peer and server components | 3.1 |
+| 3.3 | Set up orchestration (Kubernetes or similar) | 3.2 |
+| 3.4 | Create CI/CD pipelines for automated builds and deployment | 3.3 |
+| 3.5 | Configure cloud infrastructure for distributed experiments | 3.3 |
+| 3.6 | Establish data privacy and network security policies | 1.3, 1.7 |
+| 3.7 | Deploy framework to production (SAAS hosting) | 3.4, 3.5, 3.6 |
+| 3.8 | Conduct scalability and performance tests | 3.7 |
+
+### Federated Learning Integration
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 4.1 | Implement model aggregation logic using Secure Average Computation | 2.1.5, 2.3.6 |
+| 4.2 | Define model update serialization and exchange protocol | 2.2.7, 2.1.6 |
+| 4.3 | Handle asynchronous peer updates and dropout resilience | 2.3.5, 4.1, 4.2 |
+| 4.4 | Implement audit trail and logging of training rounds | 2.1.8, 4.3 |
+| 4.5 | Integrate algorithm with orchestration and monitoring services | 2.1.4, 4.3, 4.4 |
+| 4.6 | Validate model performance and convergence under federation | 4.5 |
+
+### User Interface & Experience
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 5.1 | Design admin dashboard (federation overview, peer management) | 2.1.4, 2.1.7 |
+| 5.2 | Design peer organization dashboard (local training, participation status) | 2.1.7, 2.2.2 |
+| 5.3 | Implement role-based access controls in the UI | 2.1.3, 5.1, 5.2 |
+| 5.4 | Integrate credential management and registration flows | 2.3.4, 5.1, 5.2 |
+| 5.5 | Add notifications for federation events and status updates | 2.1.8, 5.1, 5.2 |
+| 5.6 | Conduct usability testing and collect feedback | 5.3, 5.4, 5.5 |
+| 5.7 | Implement help, documentation, and onboarding pages | 5.6 |
+
+### Quality Assurance & Documentation
+
+| ID | Activity | Dependencies |
+|----|----------|--------------|
+| 6.1 | Develop comprehensive test plan | 1.7 |
+| 6.2 | Perform security and compliance testing | 2.3.8, 3.7 |
+| 6.3 | Conduct performance benchmarking | 3.8, 4.6 |
+| 6.4 | Maintain traceability between user stories and test cases | 6.1 |
+| 6.5 | Prepare technical documentation (API docs, deployment guide) | 2.1.9, 2.2.9, 2.3.8, 2.4.8, 3.7 |
+| 6.6 | Write user documentation and quick-start manuals | 5.7, 6.5 |
+| 6.7 | Conduct final validation and acceptance testing | 6.2, 6.3, 6.6 |
+| 6.8 | Prepare lessons learned and project closure report | 6.7 |
+
+By considering activity dependencies and slacks the Project Network Diagram has been produced.
+
+```mermaid
+graph TD
+    1.1 --> 1.2
+    1.2 --> 1.3
+    1.2 --> 1.4
+    1.2 --> 1.5
+    1.2 --> 1.6
+    1.3 --> 1.6
+    1.4 --> 1.6
+    1.5 --> 1.6
+    1.6 --> 1.7
+    
+    1.7 --> 2.1.1
+    1.7 --> 2.1.2
+    1.7 --> 2.1.4
+    1.7 --> 2.1.5
+    1.7 --> 2.1.6
+    1.1 --> 2.1.5
+    1.3 --> 2.1.6
+    1.4 --> 2.1.7
+    1.5 --> 2.2.1
+    1.7 --> 2.2.1
+    1.3 --> 2.3.2
+    1.7 --> 2.3.2
+    1.3 --> 3.6
+    1.7 --> 3.6
+    1.7 --> 3.1
+    1.7 --> 6.1
+    
+    2.1.1 --> 2.1.3
+    2.1.1 --> 2.1.4
+    2.1.1 --> 2.1.7
+    2.1.1 --> 2.3.1
+    2.1.1 --> 2.3.4
+    2.1.3 --> 2.1.7
+    2.1.3 --> 2.4.2
+    2.1.3 --> 5.3
+    2.1.4 --> 2.1.8
+    2.1.4 --> 2.3.5
+    2.1.4 --> 4.5
+    2.1.4 --> 5.1
+    2.1.5 --> 2.3.6
+    2.1.5 --> 4.1
+    2.1.6 --> 2.1.8
+    2.1.6 --> 4.2
+    2.1.7 --> 5.1
+    2.1.7 --> 5.2
+    2.1.8 --> 2.4.6
+    2.1.8 --> 4.4
+    2.1.8 --> 5.5
+    
+    2.2.1 --> 2.2.2
+    2.2.1 --> 2.2.3
+    2.2.1 --> 2.2.6
+    2.2.2 --> 2.2.4
+    2.2.2 --> 5.2
+    2.2.3 --> 2.2.4
+    2.2.4 --> 2.2.5
+    2.2.4 --> 2.2.7
+    2.2.6 --> 2.2.7
+    2.2.6 --> 2.2.8
+    2.2.7 --> 2.4.1
+    2.2.7 --> 2.4.4
+    2.2.7 --> 4.2
+    2.2.8 --> 2.4.4
+    
+    2.3.2 --> 2.3.3
+    2.3.2 --> 2.3.4
+    2.3.2 --> 2.3.5
+    2.3.4 --> 5.4
+    2.3.5 --> 2.3.7
+    2.3.5 --> 4.3
+    2.3.6 --> 2.3.7
+    2.3.6 --> 4.1
+    
+    2.4.1 --> 2.4.2
+    2.4.1 --> 2.4.3
+    2.4.1 --> 2.4.5
+    2.4.1 --> 2.4.7
+    
+    3.1 --> 3.2
+    3.2 --> 3.3
+    3.3 --> 3.4
+    3.3 --> 3.5
+    3.4 --> 3.7
+    3.5 --> 3.7
+    3.6 --> 3.7
+    3.7 --> 3.8
+    3.7 --> 6.2
+    3.7 --> 6.5
+    
+    4.1 --> 4.3
+    4.2 --> 4.3
+    4.3 --> 4.4
+    4.3 --> 4.5
+    4.4 --> 4.5
+    4.5 --> 4.6
+    4.6 --> 6.3
+    3.8 --> 6.3
+    
+    5.1 --> 5.3
+    5.1 --> 5.4
+    5.1 --> 5.5
+    5.2 --> 5.3
+    5.2 --> 5.4
+    5.2 --> 5.5
+    5.3 --> 5.6
+    5.4 --> 5.6
+    5.5 --> 5.6
+    5.6 --> 5.7
+    5.7 --> 6.6
+    
+    2.1.9 --> 6.5
+    2.2.9 --> 6.5
+    2.3.8 --> 6.2
+    2.3.8 --> 6.5
+    2.4.8 --> 6.5
+    6.1 --> 6.4
+    6.2 --> 6.7
+    6.3 --> 6.7
+    6.5 --> 6.6
+    6.6 --> 6.7
+    6.7 --> 6.8
+```
 
 ### Gantt
 
