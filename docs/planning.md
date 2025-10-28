@@ -251,8 +251,8 @@ Given the allocated resources, the following activity durations have been consid
 | ID | Activity | Duration Estimate |
 |----|----------|------------------|
 | 2.2.1 | Design and implement input schema definition system | 3 weeks |
-| 2.2.2 | Create layer configuration interface (UI and API) | 4 weeks |
-| 2.2.3 | Build supported architectures library and templates | 5 weeks |
+| 2.2.2 | Create layer configuration interface (UI and API) | 3 weeks |
+| 2.2.3 | Build supported architectures library and templates | 4 weeks |
 | 2.2.4 | Implement model architecture validation system | 3 weeks |
 | 2.2.5 | Develop custom layer support with sandboxing | 4 weeks |
 | 2.2.6 | Design and implement output schema definition system | 2 weeks |
@@ -499,7 +499,7 @@ The Critical Path for these activities is:
 
 **1.1 --> 1.2 --> 1.4 --> 1.6 --> 1.7**
 
-This path has an estimated total duration of 11 weeks.
+This path has an estimated total duration of 10 weeks.
 
 #### Core
 
@@ -541,7 +541,7 @@ The Critical Path for these activities is:
 
 **2.1.1 --> 2.1.3 --> 2.1.7 --> 2.1.9**
 
-This path has an estimated total duration of 18 weeks.
+This path has an estimated total duration of 17 weeks.
 
 #### Model Definition & Configuration
 
@@ -651,6 +651,7 @@ graph TD
     2.1.3 --> 2.4.2
     2.1.8 --> 2.4.6
     2.2.7 --> 2.4.1
+    2.2.7 --> 2.4.4
     2.2.8 --> 2.4.4
     2.4.1 --> 2.4.2
     2.4.1 --> 2.4.3
@@ -776,7 +777,6 @@ graph TD
 
     %% Dependencies
     2.1.3 --> 5.3
-    2.1.4 --> 5.3
     2.1.4 --> 5.1
     2.1.7 --> 5.1
     2.1.7 --> 5.2
@@ -877,7 +877,6 @@ The Critical Path for the second graph is the only path:
 This path has an estimated total duration of 3 weeks.
 
 #### Full Diagram
-
 
 ```mermaid
 graph TD
@@ -996,8 +995,8 @@ graph TD
     2.1.1 --> 2.1.4
     2.1.1 --> 2.3.1
     2.1.1 --> 2.3.4
-    2.1.3 --> 2.1.7
     2.1.2 --> 2.1.9
+    2.1.3 --> 2.1.7
     2.1.3 --> 2.4.2
     2.1.3 --> 5.3
     2.1.4 --> 2.1.8
@@ -1117,6 +1116,12 @@ graph TD
     classDef ui fill:#ffe6f2,stroke:#cc66a3,stroke-width:2px
     classDef qa fill:#f2e6d9,stroke:#b38c5c,stroke-width:2px
 ```
+
+The full project critical path is:
+
+**1.1 --> 1.2 --> 1.4 --> 1.6 --> 1.7 --> 6.1 --> 6.4 --> 2.2.1 --> 2.2.3 --> 2.2.4 --> 2.2.7 --> 2.4.1 --> 2.4.5 --> 2.4.7 --> 2.4.8 --> 6.5 --> 6.6 --> 6.7 --> 6.8**
+
+This path has an estimated total duration of 54 weeks.
 
 ### Gantt
 
