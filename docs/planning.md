@@ -291,9 +291,9 @@ Given the allocated resources, the following activity dependecies and estimate d
 | 6.7 | 2 weeks | 6.2, 6.3, 6.6 |
 | 6.8 | 1 week | 6.7 |
 
-By considering activity dependencies and slacks the Project Network Diagram has been produced.
-
 ## Project Network Diagram
+
+By considering activity dependencies and durations the Project Network Diagram has been produced.
 
 NOTE Due to the rendering engine the following graphs are best seen in light mode.
 
@@ -1033,7 +1033,9 @@ The following table shows the estimated Early/Late Start/Finish and the conseque
 
 ## Gantt
 
-To show a temporal schedule of the project a gantt chart is compiled:
+To show a temporal schedule of the project a gantt chart is compiled.
+
+The critical path is highlighted with red activities.
 
 ```mermaid
 gantt
@@ -1044,13 +1046,13 @@ gantt
     %% Each week = 7 days
 
     section Research
-    1.1 :2025-11-15, 2025-12-05
-    1.2 :2025-12-06, 2025-12-19
+    1.1 :crit, 2025-11-15, 2025-12-05
+    1.2 :crit, 2025-12-06, 2025-12-19
     1.3 :2025-12-20, 2026-01-02
-    1.4 :2025-12-20, 2026-01-09
+    1.4 :crit, 2025-12-20, 2026-01-09
     1.5 :2025-12-20, 2026-01-02
-    1.6 :2026-01-17, 2026-01-23
-    1.7 :2026-01-24, 2026-01-30
+    1.6 :crit, 2026-01-17, 2026-01-23
+    1.7 :crit, 2026-01-24, 2026-01-30
 
     section Core
     2.1.1 :2026-02-21, 2026-03-20
@@ -1064,13 +1066,13 @@ gantt
     2.1.9 :2026-05-24, 2026-06-07
 
     section Model
-    2.2.1 :2026-02-21, 2026-03-06
+    2.2.1 :crit, 2026-02-21, 2026-03-06
     2.2.2 :2026-03-07, 2026-03-21
-    2.2.3 :2026-03-07, 2026-03-28
-    2.2.4 :2026-03-29, 2026-04-11
+    2.2.3 :crit, 2026-03-07, 2026-03-28
+    2.2.4 :crit, 2026-03-29, 2026-04-11
     2.2.5 :2026-04-12, 2026-05-09
     2.2.6 :2026-03-07, 2026-03-14
-    2.2.7 :2026-04-12, 2026-05-09
+    2.2.7 :crit, 2026-04-12, 2026-05-09
     2.2.8 :2026-03-14, 2026-03-28
     2.2.9 :2026-05-10, 2026-05-17
 
@@ -1085,14 +1087,14 @@ gantt
     2.3.8 :2026-06-14, 2026-06-21
 
     section Storage
-    2.4.1 :2026-05-10, 2026-05-31
+    2.4.1 :crit, 2026-05-10, 2026-05-31
     2.4.2 :2026-06-14, 2026-06-28
     2.4.3 :2026-06-14, 2026-06-28
     2.4.4 :2026-05-10, 2026-06-14
-    2.4.5 :2026-06-14, 2026-07-19
+    2.4.5 :crit, 2026-06-14, 2026-07-19
     2.4.6 :2026-06-28, 2026-07-19
-    2.4.7 :2026-07-19, 2026-08-23
-    2.4.8 :2026-09-06, 2026-09-20
+    2.4.7 :crit, 2026-07-19, 2026-08-23
+    2.4.8 :crit, 2026-09-06, 2026-09-20
 
     section Infrastructure
     3.1 :2026-02-21, 2026-02-28
@@ -1122,14 +1124,14 @@ gantt
     5.7 :2026-08-10, 2026-08-24
 
     section QA & Doc
-    6.1 :2026-01-31, 2026-02-14
+    6.1 :crit, 2026-01-31, 2026-02-14
     6.2 :2026-07-19, 2026-08-09
     6.3 :2026-09-14, 2026-09-28
-    6.4 :2026-02-15, 2026-02-15
-    6.5 :2026-09-14, 2026-10-05
-    6.6 :2026-10-12, 2026-10-26
-    6.7 :2026-10-27, 2026-11-10
-    6.8 :2026-11-17, 2026-11-17
+    6.4 :crit, 2026-02-15, 2026-02-15
+    6.5 :crit, 2026-09-14, 2026-10-05
+    6.6 :crit, 2026-10-12, 2026-10-26
+    6.7 :crit, 2026-10-27, 2026-11-10
+    6.8 :crit, 2026-11-17, 2026-11-17
 ```
 
 ## Project Proposal
