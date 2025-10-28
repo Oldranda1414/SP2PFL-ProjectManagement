@@ -220,120 +220,78 @@ Given the allocated resources, the following activity durations have been consid
 
 ### Research & Design
 
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 1.1 | Study and interpret the Secure Average Computation algorithm (Wink et al., 2021) | 3 weeks |
-| 1.2 | Design federated architecture | 2 weeks |
-| 1.3 | Define security and encryption mechanisms for peer communication | 2 weeks |
-| 1.4 | Define API specifications and endpoints | 3 weeks |
-| 1.5 | Design data schema and metadata format for federated datasets | 2 weeks |
-| 1.6 | Produce software architecture documentation and design diagrams | 1 week |
-| 1.7 | Validate design through technical review | 1 week |
-
-### Core Framework Development
-
-#### Core
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 2.1.1 | Implement peer registration and authentication subsystem | 4 weeks |
-| 2.1.2 | Develop data preprocessing interface and function library | 3 weeks |
-| 2.1.3 | Implement role and permission management | 5 weeks |
-| 2.1.4 | Implement federated orchestration service (task coordination, scheduling) | 6 weeks |
-| 2.1.5 | Develop Secure Average Computation module | 4 weeks |
-| 2.1.6 | Implement communication protocol for distributed training | 5 weeks |
-| 2.1.7 | Develop API endpoints for peer and admin operations | 6 weeks |
-| 2.1.8 | Integrate monitoring and logging capabilities | 4 weeks |
-| 2.1.9 | Conduct unit and integration testing for modules | 3 weeks |
-
-#### Model Definition & Configuration
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 2.2.1 | Design and implement input schema definition system | 3 weeks |
-| 2.2.2 | Create layer configuration interface (UI and API) | 3 weeks |
-| 2.2.3 | Build supported architectures library and templates | 4 weeks |
-| 2.2.4 | Implement model architecture validation system | 3 weeks |
-| 2.2.5 | Develop custom layer support with sandboxing | 4 weeks |
-| 2.2.6 | Design and implement output schema definition system | 2 weeks |
-| 2.2.7 | Develop model export and serialization capabilities | 4 weeks |
-| 2.2.8 | Implement evaluation and metrics interface | 3 weeks |
-| 2.2.9 | Conduct unit and integration testing for modules | 2 weeks |
-
-#### Federation Management & Security
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 2.3.1 | Implement membership lifecycle management system | 3 weeks |
-| 2.3.2 | Develop secure communication layer with TLS/mTLS | 4 weeks |
-| 2.3.3 | Implement certificate management and auto-renewal | 2 weeks |
-| 2.3.4 | Build authentication and identity management system | 5 weeks |
-| 2.3.5 | Develop fault tolerance and retry mechanisms | 4 weeks |
-| 2.3.6 | Implement aggregation strategy framework | 5 weeks |
-| 2.3.7 | Develop training error handling and recovery system | 4 weeks |
-| 2.3.8 | Conduct unit and integration testing for modules | 2 weeks |
-
-#### Model Storage & Inference
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 2.4.1 | Implement model version control system | 4 weeks |
-| 2.4.2 | Develop model access control and permission system | 3 weeks |
-| 2.4.3 | Implement model integrity verification system | 3 weeks |
-| 2.4.4 | Build inference API service with batch processing | 6 weeks |
-| 2.4.5 | Develop edge deployment and optimization system | 5 weeks |
-| 2.4.6 | Implement performance monitoring and analytics | 4 weeks |
-| 2.4.7 | Develop model update and deployment orchestration | 5 weeks |
-| 2.4.8 | Conduct unit and integration testing for modules | 3 weeks |
-
-### Infrastructure & Deployment
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 3.1 | Configure development and testing environments | 2 weeks |
-| 3.2 | Implement containerization (e.g., Docker) for peer and server components | 3 weeks |
-| 3.3 | Set up orchestration (Kubernetes or similar) | 4 weeks |
-| 3.4 | Create CI/CD pipelines for automated builds and deployment | 3 weeks |
-| 3.5 | Configure cloud infrastructure for distributed experiments | 2 weeks |
-| 3.6 | Establish data privacy and network security policies | 1 week |
-| 3.7 | Deploy framework to production (SAAS hosting) | 2 weeks |
-| 3.8 | Conduct scalability and performance tests | 3 weeks |
-
-### Federated Learning Integration
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 4.1 | Implement model aggregation logic using Secure Average Computation | 4 weeks |
-| 4.2 | Define model update serialization and exchange protocol | 3 weeks |
-| 4.3 | Handle asynchronous peer updates and dropout resilience | 5 weeks |
-| 4.4 | Implement audit trail and logging of training rounds | 2 weeks |
-| 4.5 | Integrate algorithm with orchestration and monitoring services | 4 weeks |
-| 4.6 | Validate model performance and convergence under federation | 3 weeks |
-
-### User Interface & Experience
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 5.1 | Design admin dashboard (federation overview, peer management) | 6 weeks |
-| 5.2 | Design peer organization dashboard (local training, participation status) | 5 weeks |
-| 5.3 | Implement role-based access controls in the UI | 3 weeks |
-| 5.4 | Integrate credential management and registration flows | 2 weeks |
-| 5.5 | Add notifications for federation events and status updates | 2 weeks |
-| 5.6 | Conduct usability testing and collect feedback | 2 weeks |
-| 5.7 | Implement help, documentation, and onboarding pages | 3 weeks |
-
-### Quality Assurance & Documentation
-
-| ID | Activity | Duration Estimate |
-|----|----------|------------------|
-| 6.1 | Develop comprehensive test plan (unit, integration, system, acceptance) | 2 weeks |
-| 6.2 | Perform security and compliance testing | 4 weeks |
-| 6.3 | Conduct performance benchmarking | 3 weeks |
-| 6.4 | Maintain traceability between user stories and test cases | 1 week |
-| 6.5 | Prepare technical documentation (API docs, deployment guide) | 4 weeks |
-| 6.6 | Write user documentation and quick-start manuals | 3 weeks |
-| 6.7 | Conduct final validation and acceptance testing | 2 weeks |
-| 6.8 | Prepare lessons learned and project closure report | 1 week |
+| ID | Duration Estimate |
+|----|------------------|
+| 1.1 | 3 weeks |
+| 1.2 | 2 weeks |
+| 1.3 | 2 weeks |
+| 1.4 | 3 weeks |
+| 1.5 | 2 weeks |
+| 1.6 | 1 week |
+| 1.7 | 1 week |
+| 2.1.1 | 4 weeks |
+| 2.1.2 | 3 weeks |
+| 2.1.3 | 5 weeks |
+| 2.1.4 | 6 weeks |
+| 2.1.5 | 4 weeks |
+| 2.1.6 | 5 weeks |
+| 2.1.7 | 6 weeks |
+| 2.1.8 | 4 weeks |
+| 2.1.9 | 3 weeks |
+| 2.2.1 | 3 weeks |
+| 2.2.2 | 3 weeks |
+| 2.2.3 | 4 weeks |
+| 2.2.4 | 3 weeks |
+| 2.2.5 | 4 weeks |
+| 2.2.6 | 2 weeks |
+| 2.2.7 | 4 weeks |
+| 2.2.8 | 3 weeks |
+| 2.2.9 | 2 weeks |
+| 2.3.1 | 3 weeks |
+| 2.3.2 | 4 weeks |
+| 2.3.3 | 2 weeks |
+| 2.3.4 | 5 weeks |
+| 2.3.5 | 4 weeks |
+| 2.3.6 | 5 weeks |
+| 2.3.7 | 4 weeks |
+| 2.3.8 | 2 weeks |
+| 2.4.1 | 4 weeks |
+| 2.4.2 | 3 weeks |
+| 2.4.3 | 3 weeks |
+| 2.4.4 | 6 weeks |
+| 2.4.5 | 5 weeks |
+| 2.4.6 | 4 weeks |
+| 2.4.7 | 5 weeks |
+| 2.4.8 | 3 weeks |
+| 3.1 | 2 weeks |
+| 3.2 | 3 weeks |
+| 3.3 | 4 weeks |
+| 3.4 | 3 weeks |
+| 3.5 | 2 weeks |
+| 3.6 | 1 week |
+| 3.7 | 2 weeks |
+| 3.8 | 3 weeks |
+| 4.1 | 4 weeks |
+| 4.2 | 3 weeks |
+| 4.3 | 5 weeks |
+| 4.4 | 2 weeks |
+| 4.5 | 4 weeks |
+| 4.6 | 3 weeks |
+| 5.1 | 6 weeks |
+| 5.2 | 5 weeks |
+| 5.3 | 3 weeks |
+| 5.4 | 2 weeks |
+| 5.5 | 2 weeks |
+| 5.6 | 2 weeks |
+| 5.7 | 3 weeks |
+| 6.1 | 2 weeks |
+| 6.2 | 4 weeks |
+| 6.3 | 3 weeks |
+| 6.4 | 1 week |
+| 6.5 | 4 weeks |
+| 6.6 | 3 weeks |
+| 6.7 | 2 weeks |
+| 6.8 | 1 week |
 
 ## Project Activity Network
 
@@ -345,120 +303,78 @@ Dependencies between activities where identified:
 
 #### Research & Design
 
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 1.1 | Study and interpret the Secure Average Computation algorithm | - |
-| 1.2 | Design federated architecture | 1.1 |
-| 1.3 | Define security and encryption mechanisms for peer communication | 1.2 |
-| 1.4 | Define API specifications and endpoints | 1.2 |
-| 1.5 | Design data schema and metadata format for federated datasets | 1.2 |
-| 1.6 | Produce software architecture documentation and design diagrams | 1.3, 1.4, 1.5 |
-| 1.7 | Validate design through technical review | 1.6 |
-
-#### Core Framework Development
-
-##### Core
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 2.1.1 | Implement peer registration and authentication subsystem | 6.4 |
-| 2.1.2 | Develop data preprocessing interface and function library | 6.4 |
-| 2.1.3 | Implement role and permission management | 2.1.1 |
-| 2.1.4 | Implement federated orchestration service | 2.1.1 |
-| 2.1.5 | Develop Secure Average Computation module | 6.4 |
-| 2.1.6 | Implement communication protocol for distributed training | 6.4 |
-| 2.1.7 | Develop API endpoints for peer and admin operations | 2.1.3 |
-| 2.1.8 | Integrate monitoring and logging capabilities | 2.1.4, 2.1.6 |
-| 2.1.9 | Conduct unit and integration testing for modules | 2.1.2, 2.1.3, 2.1.5, 2.1.7, 2.1.8 |
-
-##### Model Definition & Configuration
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 2.2.1 | Design and implement input schema definition system | 6.4 |
-| 2.2.2 | Create layer configuration interface (UI and API) | 2.2.1 |
-| 2.2.3 | Build supported architectures library and templates | 2.2.1 |
-| 2.2.4 | Implement model architecture validation system | 2.2.2, 2.2.3 |
-| 2.2.5 | Develop custom layer support with sandboxing | 2.2.4 |
-| 2.2.6 | Design and implement output schema definition system | 2.2.1 |
-| 2.2.7 | Develop model export and serialization capabilities | 2.2.4, 2.2.6 |
-| 2.2.8 | Implement evaluation and metrics interface | 2.2.6 |
-| 2.2.9 | Conduct unit and integration testing for modules | 2.2.5, 2.2.7, 2.2.8 |
-
-##### Federation Management & Security
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 2.3.1 | Implement membership lifecycle management system | 2.1.1 |
-| 2.3.2 | Develop secure communication layer with TLS/mTLS | 6.4 |
-| 2.3.3 | Implement certificate management and auto-renewal | 2.3.2 |
-| 2.3.4 | Build authentication and identity management system | 2.1.1, 2.3.2 |
-| 2.3.5 | Develop fault tolerance and retry mechanisms | 2.1.4, 2.3.2 |
-| 2.3.6 | Implement aggregation strategy framework | 2.1.5 |
-| 2.3.7 | Develop training error handling and recovery system | 2.3.5, 2.3.6 |
-| 2.3.8 | Conduct unit and integration testing for modules | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
-
-##### Model Storage & Inference
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 2.4.1 | Implement model version control system | 2.2.7 |
-| 2.4.2 | Develop model access control and permission system | 2.1.3, 2.4.1 |
-| 2.4.3 | Implement model integrity verification system | 2.4.1 |
-| 2.4.4 | Build inference API service with batch processing | 2.2.7, 2.2.8 |
-| 2.4.5 | Develop edge deployment and optimization system | 2.4.1 |
-| 2.4.6 | Implement performance monitoring and analytics | 2.1.8, 2.4.4 |
-| 2.4.7 | Develop model update and deployment orchestration | 2.4.1, 2.4.5 |
-| 2.4.8 | Conduct unit and integration testing for modules | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
-
-#### Infrastructure & Deployment
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 3.1 | Configure development and testing environments | 6.4 |
-| 3.2 | Implement containerization for peer and server components | 3.1 |
-| 3.3 | Set up orchestration (Kubernetes or similar) | 3.2 |
-| 3.4 | Create CI/CD pipelines for automated builds and deployment | 3.3 |
-| 3.5 | Configure cloud infrastructure for distributed experiments | 3.3 |
-| 3.6 | Establish data privacy and network security policies | 6.4 |
-| 3.7 | Deploy framework to production (SAAS hosting) | 3.4, 3.5, 3.6 |
-| 3.8 | Conduct scalability and performance tests | 3.7 |
-
-#### Federated Learning Integration
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 4.1 | Implement model aggregation logic using Secure Average Computation | 2.1.5, 2.3.6 |
-| 4.2 | Define model update serialization and exchange protocol | 2.2.7, 2.1.6 |
-| 4.3 | Handle asynchronous peer updates and dropout resilience | 2.3.5, 4.1, 4.2 |
-| 4.4 | Implement audit trail and logging of training rounds | 2.1.8, 4.3 |
-| 4.5 | Integrate algorithm with orchestration and monitoring services | 2.1.4, 4.4 |
-| 4.6 | Validate model performance and convergence under federation | 4.5 |
-
-#### User Interface & Experience
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 5.1 | Design admin dashboard (federation overview, peer management) | 2.1.4, 2.1.7 |
-| 5.2 | Design peer organization dashboard (local training, participation status) | 2.1.7, 2.2.2 |
-| 5.3 | Implement role-based access controls in the UI | 2.1.3, 5.1, 5.2 |
-| 5.4 | Integrate credential management and registration flows | 2.3.4, 5.1, 5.2 |
-| 5.5 | Add notifications for federation events and status updates | 2.1.8, 5.1, 5.2 |
-| 5.6 | Conduct usability testing and collect feedback | 5.3, 5.4, 5.5 |
-| 5.7 | Implement help, documentation, and onboarding pages | 5.6 |
-
-#### Quality Assurance & Documentation
-
-| ID | Activity | Dependencies |
-|----|----------|--------------|
-| 6.1 | Develop comprehensive test plan | 1.7 |
-| 6.2 | Perform security and compliance testing | 2.3.8, 3.7 |
-| 6.3 | Conduct performance benchmarking | 3.8, 4.6 |
-| 6.4 | Maintain traceability between user stories and test cases | 6.1 |
-| 6.5 | Prepare technical documentation (API docs, deployment guide) | 2.1.9, 2.2.9, 2.3.8, 2.4.8, 3.7 |
-| 6.6 | Write user documentation and quick-start manuals | 5.7, 6.5 |
-| 6.7 | Conduct final validation and acceptance testing | 6.2, 6.3, 6.6 |
-| 6.8 | Prepare lessons learned and project closure report | 6.7 |
+| ID | Dependencies |
+|----|--------------|
+| 1.1 | - |
+| 1.2 | 1.1 |
+| 1.3 | 1.2 |
+| 1.4 | 1.2 |
+| 1.5 | 1.2 |
+| 1.6 | 1.3, 1.4, 1.5 |
+| 1.7 | 1.6 |
+| 2.1.1 | 6.4 |
+| 2.1.2 | 6.4 |
+| 2.1.3 | 2.1.1 |
+| 2.1.4 | 2.1.1 |
+| 2.1.5 | 6.4 |
+| 2.1.6 | 6.4 |
+| 2.1.7 | 2.1.3 |
+| 2.1.8 | 2.1.4, 2.1.6 |
+| 2.1.9 | 2.1.2, 2.1.3, 2.1.5, 2.1.7, 2.1.8 |
+| 2.2.1 | 6.4 |
+| 2.2.2 | 2.2.1 |
+| 2.2.3 | 2.2.1 |
+| 2.2.4 | 2.2.2, 2.2.3 |
+| 2.2.5 | 2.2.4 |
+| 2.2.6 | 2.2.1 |
+| 2.2.7 | 2.2.4, 2.2.6 |
+| 2.2.8 | 2.2.6 |
+| 2.2.9 | 2.2.5, 2.2.7, 2.2.8 |
+| 2.3.1 | 2.1.1 |
+| 2.3.2 | 6.4 |
+| 2.3.3 | 2.3.2 |
+| 2.3.4 | 2.1.1, 2.3.2 |
+| 2.3.5 | 2.1.4, 2.3.2 |
+| 2.3.6 | 2.1.5 |
+| 2.3.7 | 2.3.5, 2.3.6 |
+| 2.3.8 | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
+| 2.4.1 | 2.2.7 |
+| 2.4.2 | 2.1.3, 2.4.1 |
+| 2.4.3 | 2.4.1 |
+| 2.4.4 | 2.2.7, 2.2.8 |
+| 2.4.5 | 2.4.1 |
+| 2.4.6 | 2.1.8, 2.4.4 |
+| 2.4.7 | 2.4.1, 2.4.5 |
+| 2.4.8 | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
+| 3.1 | 6.4 |
+| 3.2 | 3.1 |
+| 3.3 | 3.2 |
+| 3.4 | 3.3 |
+| 3.5 | 3.3 |
+| 3.6 | 6.4 |
+| 3.7 | 3.4, 3.5, 3.6 |
+| 3.8 | 3.7 |
+| 4.1 | 2.1.5, 2.3.6 |
+| 4.2 | 2.2.7, 2.1.6 |
+| 4.3 | 2.3.5, 4.1, 4.2 |
+| 4.4 | 2.1.8, 4.3 |
+| 4.5 | 2.1.4, 4.4 |
+| 4.6 | 4.5 |
+| 5.1 | 2.1.4, 2.1.7 |
+| 5.2 | 2.1.7, 2.2.2 |
+| 5.3 | 2.1.3, 5.1, 5.2 |
+| 5.4 | 2.3.4, 5.1, 5.2 |
+| 5.5 | 2.1.8, 5.1, 5.2 |
+| 5.6 | 5.3, 5.4, 5.5 |
+| 5.7 | 5.6 |
+| 6.1 | 1.7 |
+| 6.2 | 2.3.8, 3.7 |
+| 6.3 | 3.8, 4.6 |
+| 6.4 | 6.1 |
+| 6.5 | 2.1.9, 2.2.9, 2.3.8, 2.4.8, 3.7 |
+| 6.6 | 5.7, 6.5 |
+| 6.7 | 6.2, 6.3, 6.6 |
+| 6.8 | 6.7 |
 
 By considering activity dependencies and slacks the Project Network Diagram has been produced.
 
@@ -1122,6 +1038,83 @@ The full project critical path is:
 **1.1 --> 1.2 --> 1.4 --> 1.6 --> 1.7 --> 6.1 --> 6.4 --> 2.2.1 --> 2.2.3 --> 2.2.4 --> 2.2.7 --> 2.4.1 --> 2.4.5 --> 2.4.7 --> 2.4.8 --> 6.5 --> 6.6 --> 6.7 --> 6.8**
 
 This path has an estimated total duration of 54 weeks.
+
+### Estimated Start & Finish
+
+The following table shows the estimated Early/Late Start/Finish and the consequent slack available for each activity:
+
+| ID | Early Start | Early Finish | Late Start | Late Finish | Slack |
+|----|-------------|--------------|------------|-------------|-------|
+| 1.1 | 1 | 3 | 1 | 3 | 0 |
+| 1.2 | 4 | 5 | 4 | 5 | 0 |
+| 1.3 | 6 | 7 | 7 | 8 | 1 |
+| 1.4 | 6 | 8 | 6 | 8 | 0 |
+| 1.5 | 6 | 7 | 7 | 8 | 1 |
+| 1.6 | 9 | 9 | 9 | 9 | 0 |
+| 1.7 | 10 | 10 | 10 | 10 | 0 |
+| 2.1.1 | 14 | 17 | 20 | 23 | 6 |
+| 2.1.2 | 14 | 16 | 39 | 41 | 25 |
+| 2.1.3 | 18 | 22 | 24 | 28 | 6 |
+| 2.1.4 | 18 | 24 | 34 | 38 | 16 |
+| 2.1.5 | 14 | 17 | 30 | 33 | 16 |
+| 2.1.6 | 14 | 18 | 27 | 31 | 13 |
+| 2.1.7 | 23 | 28 | 29 | 34 | 6 |
+| 2.1.8 | 24 | 27 | 34 | 37 | 10 |
+| 2.1.9 | 29 | 31 | 42 | 44 | 13 |
+| 2.2.1 | 14 | 16 | 14 | 16 | 0 |
+| 2.2.2 | 17 | 19 | 18 | 20 | 1 |
+| 2.2.3 | 17 | 20 | 17 | 20 | 0 |
+| 2.2.4 | 21 | 23 | 21 | 23 | 0 |
+| 2.2.5 | 24 | 27 | 39 | 42 | 15 |
+| 2.2.6 | 17 | 18 | 22 | 23 | 5 |
+| 2.2.7 | 24 | 27 | 24 | 27 | 0 |
+| 2.2.8 | 19 | 21 | 29 | 31 | 10 |
+| 2.2.9 | 28 | 29 | 43 | 44 | 15 |
+| 2.3.1 | 18 | 20 | 40 | 42 | 22 |
+| 2.3.2 | 14 | 17 | 31 | 34 | 17 |
+| 2.3.3 | 18 | 19 | 41 | 42 | 23 |
+| 2.3.4 | 18 | 22 | 37 | 41 | 19 |
+| 2.3.5 | 24 | 27 | 35 | 38 | 11 |
+| 2.3.6 | 18 | 24 | 34 | 38 | 16 |
+| 2.3.7 | 28 | 31 | 39 | 42 | 11 |
+| 2.3.8 | 32 | 33 | 43 | 44 | 11 |
+| 2.4.1 | 28 | 31 | 28 | 31 | 0 |
+| 2.4.2 | 32 | 34 | 39 | 41 | 7 |
+| 2.4.3 | 32 | 34 | 39 | 41 | 7 |
+| 2.4.4 | 28 | 33 | 32 | 37 | 4 |
+| 2.4.5 | 32 | 36 | 32 | 36 | 0 |
+| 2.4.6 | 34 | 37 | 38 | 41 | 4 |
+| 2.4.7 | 37 | 41 | 37 | 41 | 0 |
+| 2.4.8 | 42 | 44 | 42 | 44 | 0 |
+| 3.1 | 14 | 15 | 31 | 32 | 17 |
+| 3.2 | 16 | 18 | 33 | 35 | 17 |
+| 3.3 | 19 | 22 | 36 | 39 | 17 |
+| 3.4 | 23 | 25 | 40 | 42 | 17 |
+| 3.5 | 23 | 24 | 41 | 42 | 18 |
+| 3.6 | 14 | 14 | 42 | 42 | 28 |
+| 3.7 | 26 | 27 | 43 | 44 | 17 |
+| 3.8 | 28 | 30 | 46 | 48 | 18 |
+| 4.1 | 25 | 28 | 31 | 34 | 6 |
+| 4.2 | 28 | 30 | 32 | 34 | 4 |
+| 4.3 | 31 | 35 | 35 | 39 | 4 |
+| 4.4 | 36 | 37 | 40 | 41 | 4 |
+| 4.5 | 38 | 41 | 42 | 45 | 4 |
+| 4.6 | 42 | 44 | 46 | 48 | 4 |
+| 5.1 | 29 | 34 | 35 | 40 | 6 |
+| 5.2 | 29 | 33 | 36 | 40 | 7 |
+| 5.3 | 35 | 37 | 41 | 43 | 6 |
+| 5.4 | 35 | 36 | 42 | 43 | 7 |
+| 5.5 | 35 | 36 | 42 | 43 | 7 |
+| 5.6 | 38 | 39 | 44 | 45 | 6 |
+| 5.7 | 40 | 42 | 46 | 48 | 6 |
+| 6.1 | 11 | 12 | 11 | 12 | 0 |
+| 6.2 | 34 | 37 | 48 | 51 | 14 |
+| 6.3 | 45 | 47 | 49 | 51 | 4 |
+| 6.4 | 13 | 13 | 13 | 13 | 0 |
+| 6.5 | 45 | 48 | 45 | 48 | 0 |
+| 6.6 | 49 | 51 | 49 | 51 | 0 |
+| 6.7 | 52 | 53 | 52 | 53 | 0 |
+| 6.8 | 54 | 54 | 54 | 54 | 0 |
 
 ### Gantt
 
