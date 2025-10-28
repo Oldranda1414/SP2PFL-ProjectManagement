@@ -1033,6 +1033,12 @@ The following table shows the estimated Early/Late Start/Finish and the conseque
 | 6.7 | 52 | 53 | 52 | 53 | 0 |
 | 6.8 | 54 | 54 | 54 | 54 | 0 |
 
+The following partially handwritten graphs show the full project activity diagram with early/late start/finish and slack, omitting the trivial research portion of the diagram:
+
+![image](./assets/diag1.jpg)
+
+![image](./assets/diag2.jpg)
+
 ## Gantt
 
 To show a temporal schedule of the project a gantt chart is compiled.
@@ -1171,7 +1177,7 @@ The main objective of the Tyr Framework project is to **design, develop, and dep
 1. Implement the Secure Average Computation protocol in a production-ready environment.
 2. Develop a robust API for integration with client systems.
 3. Provide a user-friendly web dashboard for managing distributed training workflows.
-4. Ensure compliance with international data protection standards (GDPR, ISO/IEC 27001).
+4. Ensure compliance with international data protection standards.
 5. Conduct a pilot deployment with at least three enterprise clients.
 6. Launch a marketing and outreach campaign to promote the new platform.
 
@@ -1181,7 +1187,7 @@ The successful completion of the project will result in a commercial-ready produ
 
 ### Overview of Approach
 
-Given the complexity and internal nature of the project, OpenML will adopt a **Traditional PMLC approach**. This choice prioritizes stable requirements, controlled risk, and predictable delivery timelines, while allowing minor flexibility through iterative reviews within each phase.
+Given the complexity and internal nature of the project, OpenML will adopt a **Traditional PMLC approach**. This choice prioritizes stable requirements, controlled risk, and predictable delivery timelines.
 
 #### Project Phases
 
