@@ -1154,8 +1154,6 @@ Following a **Traditional Project Management Life Cycle (PMLC)**, the project wi
 
 Successful completion will result in a fully operational SaaS product, validated through pilot deployments with enterprise clients and capable of serving as the foundation for future privacy-preserving ML initiatives by OpenML.
 
----
-
 ### Background
 
 OpenML has established itself as a competitive player in the Machine Learning software market through its existing **SaaS ML Framework API**, used by a variety of clients to train and deploy AI models efficiently.  
@@ -1165,8 +1163,6 @@ However, with growing regulatory and ethical pressures around data privacy, trad
 Despite academic progress in this field, there is **no commercial implementation** of the *Secure Average Computation* algorithm proposed by Wink et al. (2021), which provides a mathematically rigorous method for maintaining **data confidentiality among competing peers**.  
 
 OpenML intends to bridge this gap through Tyr Framework — a distributed learning platform that enables multiple organizations to contribute to a shared AI model while retaining full control over their data.
-
----
 
 ### Objective
 
@@ -1182,8 +1178,6 @@ The main objective of the Tyr Framework project is to **design, develop, and dep
 6. Launch a marketing and outreach campaign to promote the new platform.
 
 The successful completion of the project will result in a commercial-ready product that can be seamlessly integrated into OpenML’s existing SaaS ecosystem.
-
----
 
 ### Overview of Approach
 
