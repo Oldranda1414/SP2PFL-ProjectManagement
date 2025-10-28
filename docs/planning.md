@@ -1206,7 +1206,6 @@ flowchart
 
 ### Risk Analysis
 
-
 | Risk                                           | Probability | Impact | Mitigation Strategy                                               |
 | ---------------------------------------------- | ----------- | ------ | ----------------------------------------------------------------- |
 | Delay due to algorithmic complexity            | Medium      | High   | Allocate additional research buffer; involve academic consultants |
