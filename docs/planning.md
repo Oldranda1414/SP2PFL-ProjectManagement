@@ -539,9 +539,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**2.1.1 --> 2.1.3 --> 2.1.7 --> 2.1.9**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 18 weeks.
 
 #### Model Definition & Configuration
 
@@ -580,9 +580,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**2.2.1 --> 2.2.3 --> 2.2.4 --> 2.2.5/2.2.7 --> 2.2.9**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 17 weeks.
 
 #### Federation Management & Security
 
@@ -625,9 +625,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**2.3.2 --> 2.3.5 --> 2.3.7 --> 2.3.8**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 14 weeks.
 
 #### Model Storage & Inference
 
@@ -669,9 +669,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**2.4.1 --> 2.4.5 --> 2.4.7 --> 2.4.8**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 17 weeks.
 
 #### Infrastructure & Deployment
 
@@ -706,9 +706,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**3.1 --> 3.2 --> 3.3 --> 3.4/3.5 --> 3.7 --> 3.8**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 17 weeks.
 
 #### Federated Learning Integration
 
@@ -751,9 +751,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**4.1 --> 4.3 --> 4.4 --> 4.5 --> 4.6**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 18 weeks.
 
 #### User Interface & Experience
 
@@ -804,9 +804,9 @@ graph TD
 
 The Critical Path for these activities is:
 
-****
+**5.1 --> 5.3 --> 5.6 --> 5.7**
 
-This path has an estimated total duration of weeks.
+This path has an estimated total duration of 14 weeks.
 
 #### Quality Assurance & Documentation
 
