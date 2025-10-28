@@ -1132,8 +1132,6 @@ gantt
     6.8 :2026-11-17, 2026-11-17
 ```
 
-## Iteration Planning
-
 ## Project Proposal
 
 ### Executive Summary

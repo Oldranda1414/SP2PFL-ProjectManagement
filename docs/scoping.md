@@ -601,18 +601,16 @@ The Tyr Framework project has many characteristics to consider when choosing the
         - Higher cost of scope updates.
         - Higher chance of client unsatisfaction or product's market failure.
 
-Given the pros and cons considered, a hybrid approach is choosen, aka the incremental model. The following graph shows what this model entails:
+Given the pros and cons considered, a traditional approach is choosen, considering that the internal nature of the project should enable more fixed requirements.
+
+The following graph shows the main phases of the approach choosen:
 
 ```mermaid
 flowchart
     A[Scope] --> B[Plan]
-    B --> C[Launch Increment]
+    B --> C[Launch]
     C --> D[Monitor & Control]
-    D --> E[Close Increment]
-    E --> F[Next Increment]
-    F --> G{Last Increment?}
-    G -->|Yes| H[Close]
-    G -->|No| C
+    D --> E[Close]
 ```
 
 By executing a single Planning phase the planning overhead is limited, while the iterations allow to dinamically change activity and resource allocations when needed.
