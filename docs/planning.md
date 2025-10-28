@@ -954,6 +954,8 @@ The full project critical path is:
 
 This path has an estimated total duration of 54 weeks.
 
+A phony activity is added at the end of the project to function as scope bank. It's size is calculated to be 10% of the estimated project duration, rounded up to the nearest full week, so it's duration is set at 6 weeks, making the estimated duration of the execution phase of the project 60 weeks.
+
 ## Estimated Start & Finish
 
 The following table shows the estimated Early/Late Start/Finish and the consequent slack available for each activity:
@@ -1138,15 +1140,101 @@ gantt
 
 ### Executive Summary
 
+OpenML, a rapidly growing software house specialized in Machine Learning solutions, aims to expand its portfolio through the development of **Tyr Framework**, a proprietary platform for **Distributed Federated Learning (DFL)**. The framework will implement the *Secure Average Computation* algorithm described by Wink et al. (2021), enabling organizations to collaboratively train Machine Learning models **without sharing sensitive data**.  
+
+The project seeks to position OpenML as an early mover in the field of **privacy-preserving AI**, addressing an emerging market demand driven by stricter data protection regulations and increasing concerns around data ownership.  
+
+Following a **Traditional Project Management Life Cycle (PMLC)**, the project will move through well-defined phases of scoping, planning, execution, monitoring, and closure. The estimated project duration is **12 months**, and the total cost is projected at **€1.2 million**, with personnel costs as the main component.  
+
+Successful completion will result in a fully operational SaaS product, validated through pilot deployments with enterprise clients and capable of serving as the foundation for future privacy-preserving ML initiatives by OpenML.
+
+---
+
 ### Background
+
+OpenML has established itself as a competitive player in the Machine Learning software market through its existing **SaaS ML Framework API**, used by a variety of clients to train and deploy AI models efficiently.  
+
+However, with growing regulatory and ethical pressures around data privacy, traditional centralized model training approaches face significant limitations. Federated Learning (FL) offers a promising alternative by allowing decentralized training where data remains within each organization’s infrastructure.  
+
+Despite academic progress in this field, there is **no commercial implementation** of the *Secure Average Computation* algorithm proposed by Wink et al. (2021), which provides a mathematically rigorous method for maintaining **data confidentiality among competing peers**.  
+
+OpenML intends to bridge this gap through Tyr Framework — a distributed learning platform that enables multiple organizations to contribute to a shared AI model while retaining full control over their data.
+
+---
 
 ### Objective
 
+The main objective of the Tyr Framework project is to **design, develop, and deploy a secure, scalable SaaS platform** for privacy-preserving Distributed Federated Learning.
+
+#### Specific Objectives
+
+1. Implement the Secure Average Computation protocol in a production-ready environment.
+2. Develop a robust API for integration with client systems.
+3. Provide a user-friendly web dashboard for managing distributed training workflows.
+4. Ensure compliance with international data protection standards (GDPR, ISO/IEC 27001).
+5. Conduct a pilot deployment with at least three enterprise clients.
+6. Launch a marketing and outreach campaign to promote the new platform.
+
+The successful completion of the project will result in a commercial-ready product that can be seamlessly integrated into OpenML’s existing SaaS ecosystem.
+
+---
+
 ### Overview of Approach
 
-### Detailed Statements of Work
+Given the complexity and internal nature of the project, OpenML will adopt a **Traditional PMLC approach**. This choice prioritizes stable requirements, controlled risk, and predictable delivery timelines, while allowing minor flexibility through iterative reviews within each phase.
+
+#### Project Phases
+
+```mermaid
+flowchart
+    A[Scope Definition] --> B[Project Planning]
+    B --> C[Project Execution (Launch)]
+    C --> D[Monitoring & Control]
+    D --> E[Project Closure]
+```
+
+- Scope Definition:
+    - Establish the project vision, high-level requirements, constraints, and success metrics.
+- Project Planning:
+    - Develop detailed project plans, resource allocation, work breakdown structures (WBS), risk management strategies, and timelines.
+- Execution (Launch):
+    - Implementation of the Tyr Framework’s core modules: API, backend services, communication protocols, and user interfaces.
+- Monitoring & Control:
+    - Continuous tracking of progress, performance, and quality metrics; ensure adherence to scope, budget, and schedule.
+- Closure:
+    - Deliver final documentation, transfer ownership to the operations team, and perform analysis to capture lessons learned.
 
 ### Risk Analysis
 
+
+| Risk                                           | Probability | Impact | Mitigation Strategy                                               |
+| ---------------------------------------------- | ----------- | ------ | ----------------------------------------------------------------- |
+| Delay due to algorithmic complexity            | Medium      | High   | Allocate additional research buffer; involve academic consultants |
+| Security vulnerabilities in peer communication | Medium      | High   | Perform external security audits and penetration testing          |
+| Limited adoption by clients                    | Medium      | Medium | Implement strong pilot program with marketing incentives          |
+| Skill gap in cryptography                      | High        | Medium | Hire or contract cryptography expert for short-term consultancy   |
+| Scope creep during implementation              | Low         | Medium | Enforce change control process and periodic review gates          |
+
 ### Time and Cost Summary
+
+#### Estimated Duration
+
+| Phase                       | Duration (Weeks)          | Start   | End     |
+| --------------------------- | ------------------------- | ------- | ------- |
+| Scope Definition            | 3                         | Week 1  | Week 3  |
+| Planning                    | 5                         | Week 4  | Week 8  |
+| Execution (Launch)          | 60                        | Week 9  | Week 69 |
+| Monitoring & Control        | During Execution          | Week 9  | Week 69 |
+| Closure                     | 4                         | Week 69 | Week 72 |
+| **Total Project Duration:** | **72 weeks (≈17 months)** |         |         |
+
+#### Estimated Costs
+
+| Category              | Percentage | Estimated Cost (€) |
+| --------------------- | ---------- | ------------------ |
+| Personnel             | 65%        | 780,000            |
+| Infrastructure        | 20%        | 240,000            |
+| Security & Compliance | 10%        | 120,000            |
+| Contingency           | 5%         | 60,000             |
+| **Total**             | **100%**   | **€1,200,000**     |
 
