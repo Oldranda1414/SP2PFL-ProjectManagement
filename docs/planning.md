@@ -958,7 +958,7 @@ A phony activity is added at the end of the project to function as scope bank. I
 
 ## Estimated Start & Finish
 
-The following table shows the estimated Early/Late Start/Finish and the consequent slack available for each activity:
+The following table shows the estimated Early/Late Start/Finish (in weeks) and the consequent slack available for each activity:
 
 | ID | Early Start | Early Finish | Late Start | Late Finish | Slack |
 |----|-------------|--------------|------------|-------------|-------|
