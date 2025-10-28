@@ -1150,7 +1150,7 @@ OpenML, a rapidly growing software house specialized in Machine Learning solutio
 
 The project seeks to position OpenML as an early mover in the field of **privacy-preserving AI**, addressing an emerging market demand driven by stricter data protection regulations and increasing concerns around data ownership.  
 
-Following a **Traditional Project Management Life Cycle (PMLC)**, the project will move through well-defined phases of scoping, planning, execution, monitoring, and closure. The estimated project duration is **12 months**, and the total cost is projected at **€1.2 million**, with personnel costs as the main component.  
+Following a **Traditional Project Management Life Cycle (PMLC)**, the project will move through well-defined phases of scoping, planning, execution, monitoring, and closure. The estimated project duration is **17 months**, and the total cost is projected at **€1.2 million**, with personnel costs as the main component.  
 
 Successful completion will result in a fully operational SaaS product, validated through pilot deployments with enterprise clients and capable of serving as the foundation for future privacy-preserving ML initiatives by OpenML.
 
@@ -1194,7 +1194,7 @@ Given the complexity and internal nature of the project, OpenML will adopt a **T
 ```mermaid
 flowchart
     A[Scope Definition] --> B[Project Planning]
-    B --> C[Project Execution (Launch)]
+    B --> C[Project Execution]
     C --> D[Monitoring & Control]
     D --> E[Project Closure]
 ```
