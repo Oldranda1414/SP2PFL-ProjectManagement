@@ -214,175 +214,90 @@ Known tools were preferred to limit employee training necessity.
 
 Percentage estimations have been aided by past project experience.
 
-## Activity Durations
+## Activity Durations & Dependencies
 
-Given the allocated resources, the following activity durations have been considered.
+Given the allocated resources, the following activity dependecies and estimate durations have been considered.
 
-### Research & Design
-
-| ID | Duration Estimate |
-|----|------------------|
-| 1.1 | 3 weeks |
-| 1.2 | 2 weeks |
-| 1.3 | 2 weeks |
-| 1.4 | 3 weeks |
-| 1.5 | 2 weeks |
-| 1.6 | 1 week |
-| 1.7 | 1 week |
-| 2.1.1 | 4 weeks |
-| 2.1.2 | 3 weeks |
-| 2.1.3 | 5 weeks |
-| 2.1.4 | 6 weeks |
-| 2.1.5 | 4 weeks |
-| 2.1.6 | 5 weeks |
-| 2.1.7 | 6 weeks |
-| 2.1.8 | 4 weeks |
-| 2.1.9 | 3 weeks |
-| 2.2.1 | 3 weeks |
-| 2.2.2 | 3 weeks |
-| 2.2.3 | 4 weeks |
-| 2.2.4 | 3 weeks |
-| 2.2.5 | 4 weeks |
-| 2.2.6 | 2 weeks |
-| 2.2.7 | 4 weeks |
-| 2.2.8 | 3 weeks |
-| 2.2.9 | 2 weeks |
-| 2.3.1 | 3 weeks |
-| 2.3.2 | 4 weeks |
-| 2.3.3 | 2 weeks |
-| 2.3.4 | 5 weeks |
-| 2.3.5 | 4 weeks |
-| 2.3.6 | 5 weeks |
-| 2.3.7 | 4 weeks |
-| 2.3.8 | 2 weeks |
-| 2.4.1 | 4 weeks |
-| 2.4.2 | 3 weeks |
-| 2.4.3 | 3 weeks |
-| 2.4.4 | 6 weeks |
-| 2.4.5 | 5 weeks |
-| 2.4.6 | 4 weeks |
-| 2.4.7 | 5 weeks |
-| 2.4.8 | 3 weeks |
-| 3.1 | 2 weeks |
-| 3.2 | 3 weeks |
-| 3.3 | 4 weeks |
-| 3.4 | 3 weeks |
-| 3.5 | 2 weeks |
-| 3.6 | 1 week |
-| 3.7 | 2 weeks |
-| 3.8 | 3 weeks |
-| 4.1 | 4 weeks |
-| 4.2 | 3 weeks |
-| 4.3 | 5 weeks |
-| 4.4 | 2 weeks |
-| 4.5 | 4 weeks |
-| 4.6 | 3 weeks |
-| 5.1 | 6 weeks |
-| 5.2 | 5 weeks |
-| 5.3 | 3 weeks |
-| 5.4 | 2 weeks |
-| 5.5 | 2 weeks |
-| 5.6 | 2 weeks |
-| 5.7 | 3 weeks |
-| 6.1 | 2 weeks |
-| 6.2 | 4 weeks |
-| 6.3 | 3 weeks |
-| 6.4 | 1 week |
-| 6.5 | 4 weeks |
-| 6.6 | 3 weeks |
-| 6.7 | 2 weeks |
-| 6.8 | 1 week |
-
-## Project Activity Network
-
-To determine the critical path and Gantt chart a project network diagram must be constructed.
-
-### Dependencies
-
-Dependencies between activities where identified:
-
-#### Research & Design
-
-| ID | Dependencies |
-|----|--------------|
-| 1.1 | - |
-| 1.2 | 1.1 |
-| 1.3 | 1.2 |
-| 1.4 | 1.2 |
-| 1.5 | 1.2 |
-| 1.6 | 1.3, 1.4, 1.5 |
-| 1.7 | 1.6 |
-| 2.1.1 | 6.4 |
-| 2.1.2 | 6.4 |
-| 2.1.3 | 2.1.1 |
-| 2.1.4 | 2.1.1 |
-| 2.1.5 | 6.4 |
-| 2.1.6 | 6.4 |
-| 2.1.7 | 2.1.3 |
-| 2.1.8 | 2.1.4, 2.1.6 |
-| 2.1.9 | 2.1.2, 2.1.3, 2.1.5, 2.1.7, 2.1.8 |
-| 2.2.1 | 6.4 |
-| 2.2.2 | 2.2.1 |
-| 2.2.3 | 2.2.1 |
-| 2.2.4 | 2.2.2, 2.2.3 |
-| 2.2.5 | 2.2.4 |
-| 2.2.6 | 2.2.1 |
-| 2.2.7 | 2.2.4, 2.2.6 |
-| 2.2.8 | 2.2.6 |
-| 2.2.9 | 2.2.5, 2.2.7, 2.2.8 |
-| 2.3.1 | 2.1.1 |
-| 2.3.2 | 6.4 |
-| 2.3.3 | 2.3.2 |
-| 2.3.4 | 2.1.1, 2.3.2 |
-| 2.3.5 | 2.1.4, 2.3.2 |
-| 2.3.6 | 2.1.5 |
-| 2.3.7 | 2.3.5, 2.3.6 |
-| 2.3.8 | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
-| 2.4.1 | 2.2.7 |
-| 2.4.2 | 2.1.3, 2.4.1 |
-| 2.4.3 | 2.4.1 |
-| 2.4.4 | 2.2.7, 2.2.8 |
-| 2.4.5 | 2.4.1 |
-| 2.4.6 | 2.1.8, 2.4.4 |
-| 2.4.7 | 2.4.1, 2.4.5 |
-| 2.4.8 | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
-| 3.1 | 6.4 |
-| 3.2 | 3.1 |
-| 3.3 | 3.2 |
-| 3.4 | 3.3 |
-| 3.5 | 3.3 |
-| 3.6 | 6.4 |
-| 3.7 | 3.4, 3.5, 3.6 |
-| 3.8 | 3.7 |
-| 4.1 | 2.1.5, 2.3.6 |
-| 4.2 | 2.2.7, 2.1.6 |
-| 4.3 | 2.3.5, 4.1, 4.2 |
-| 4.4 | 2.1.8, 4.3 |
-| 4.5 | 2.1.4, 4.4 |
-| 4.6 | 4.5 |
-| 5.1 | 2.1.4, 2.1.7 |
-| 5.2 | 2.1.7, 2.2.2 |
-| 5.3 | 2.1.3, 5.1, 5.2 |
-| 5.4 | 2.3.4, 5.1, 5.2 |
-| 5.5 | 2.1.8, 5.1, 5.2 |
-| 5.6 | 5.3, 5.4, 5.5 |
-| 5.7 | 5.6 |
-| 6.1 | 1.7 |
-| 6.2 | 2.3.8, 3.7 |
-| 6.3 | 3.8, 4.6 |
-| 6.4 | 6.1 |
-| 6.5 | 2.1.9, 2.2.9, 2.3.8, 2.4.8, 3.7 |
-| 6.6 | 5.7, 6.5 |
-| 6.7 | 6.2, 6.3, 6.6 |
-| 6.8 | 6.7 |
+| ID | Duration Estimate | Dependencies |
+|----|------------------|--------------|
+| 1.1 | 3 weeks | - |
+| 1.2 | 2 weeks | 1.1 |
+| 1.3 | 2 weeks | 1.2 |
+| 1.4 | 3 weeks | 1.2 |
+| 1.5 | 2 weeks | 1.2 |
+| 1.6 | 1 week | 1.3, 1.4, 1.5 |
+| 1.7 | 1 week | 1.6 |
+| 2.1.1 | 4 weeks | 6.4 |
+| 2.1.2 | 3 weeks | 6.4 |
+| 2.1.3 | 5 weeks | 2.1.1 |
+| 2.1.4 | 6 weeks | 2.1.1 |
+| 2.1.5 | 4 weeks | 6.4 |
+| 2.1.6 | 5 weeks | 6.4 |
+| 2.1.7 | 6 weeks | 2.1.3 |
+| 2.1.8 | 4 weeks | 2.1.4, 2.1.6 |
+| 2.1.9 | 3 weeks | 2.1.2, 2.1.3, 2.1.5, 2.1.7, 2.1.8 |
+| 2.2.1 | 3 weeks | 6.4 |
+| 2.2.2 | 3 weeks | 2.2.1 |
+| 2.2.3 | 4 weeks | 2.2.1 |
+| 2.2.4 | 3 weeks | 2.2.2, 2.2.3 |
+| 2.2.5 | 4 weeks | 2.2.4 |
+| 2.2.6 | 2 weeks | 2.2.1 |
+| 2.2.7 | 4 weeks | 2.2.4, 2.2.6 |
+| 2.2.8 | 3 weeks | 2.2.6 |
+| 2.2.9 | 2 weeks | 2.2.5, 2.2.7, 2.2.8 |
+| 2.3.1 | 3 weeks | 2.1.1 |
+| 2.3.2 | 4 weeks | 6.4 |
+| 2.3.3 | 2 weeks | 2.3.2 |
+| 2.3.4 | 5 weeks | 2.1.1, 2.3.2 |
+| 2.3.5 | 4 weeks | 2.1.4, 2.3.2 |
+| 2.3.6 | 5 weeks | 2.1.5 |
+| 2.3.7 | 4 weeks | 2.3.5, 2.3.6 |
+| 2.3.8 | 2 weeks | 2.3.1, 2.3.3, 2.3.4, 2.3.7 |
+| 2.4.1 | 4 weeks | 2.2.7 |
+| 2.4.2 | 3 weeks | 2.1.3, 2.4.1 |
+| 2.4.3 | 3 weeks | 2.4.1 |
+| 2.4.4 | 6 weeks | 2.2.7, 2.2.8 |
+| 2.4.5 | 5 weeks | 2.4.1 |
+| 2.4.6 | 4 weeks | 2.1.8, 2.4.4 |
+| 2.4.7 | 5 weeks | 2.4.1, 2.4.5 |
+| 2.4.8 | 3 weeks | 2.4.2, 2.4.3, 2.4.6, 2.4.7 |
+| 3.1 | 2 weeks | 6.4 |
+| 3.2 | 3 weeks | 3.1 |
+| 3.3 | 4 weeks | 3.2 |
+| 3.4 | 3 weeks | 3.3 |
+| 3.5 | 2 weeks | 3.3 |
+| 3.6 | 1 week | 6.4 |
+| 3.7 | 2 weeks | 3.4, 3.5, 3.6 |
+| 3.8 | 3 weeks | 3.7 |
+| 4.1 | 4 weeks | 2.1.5, 2.3.6 |
+| 4.2 | 3 weeks | 2.2.7, 2.1.6 |
+| 4.3 | 5 weeks | 2.3.5, 4.1, 4.2 |
+| 4.4 | 2 weeks | 2.1.8, 4.3 |
+| 4.5 | 4 weeks | 2.1.4, 4.4 |
+| 4.6 | 3 weeks | 4.5 |
+| 5.1 | 6 weeks | 2.1.4, 2.1.7 |
+| 5.2 | 5 weeks | 2.1.7, 2.2.2 |
+| 5.3 | 3 weeks | 2.1.3, 5.1, 5.2 |
+| 5.4 | 2 weeks | 2.3.4, 5.1, 5.2 |
+| 5.5 | 2 weeks | 2.1.8, 5.1, 5.2 |
+| 5.6 | 2 weeks | 5.3, 5.4, 5.5 |
+| 5.7 | 3 weeks | 5.6 |
+| 6.1 | 2 weeks | 1.7 |
+| 6.2 | 4 weeks | 2.3.8, 3.7 |
+| 6.3 | 3 weeks | 3.8, 4.6 |
+| 6.4 | 1 week | 6.1 |
+| 6.5 | 4 weeks | 2.1.9, 2.2.9, 2.3.8, 2.4.8, 3.7 |
+| 6.6 | 3 weeks | 5.7, 6.5 |
+| 6.7 | 2 weeks | 6.2, 6.3, 6.6 |
+| 6.8 | 1 week | 6.7 |
 
 By considering activity dependencies and slacks the Project Network Diagram has been produced.
 
-### Project Network Diagram
+## Project Network Diagram
 
 NOTE Due to the rendering engine the following graphs are best seen in light mode.
 
-#### Research & Design
+### Research & Design
 
 ```mermaid
 graph TD
@@ -417,7 +332,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 10 weeks.
 
-#### Core
+### Core
 
 ```mermaid
 graph TD
@@ -459,7 +374,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 17 weeks.
 
-#### Model Definition & Configuration
+### Model Definition & Configuration
 
 ```mermaid
 graph TD
@@ -500,7 +415,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 17 weeks.
 
-#### Federation Management & Security
+### Federation Management & Security
 
 ```mermaid
 graph TD
@@ -545,7 +460,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 14 weeks.
 
-#### Model Storage & Inference
+### Model Storage & Inference
 
 ```mermaid
 graph TD
@@ -590,7 +505,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 17 weeks.
 
-#### Infrastructure & Deployment
+### Infrastructure & Deployment
 
 ```mermaid
 graph TD
@@ -627,7 +542,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 17 weeks.
 
-#### Federated Learning Integration
+### Federated Learning Integration
 
 ```mermaid
 graph TD
@@ -672,7 +587,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 18 weeks.
 
-#### User Interface & Experience
+### User Interface & Experience
 
 ```mermaid
 graph TD
@@ -724,7 +639,7 @@ The Critical Path for these activities is:
 
 This path has an estimated total duration of 14 weeks.
 
-#### Quality Assurance & Documentation
+### Quality Assurance & Documentation
 
 ```mermaid
 graph TD
@@ -792,7 +707,7 @@ The Critical Path for the second graph is the only path:
 
 This path has an estimated total duration of 3 weeks.
 
-#### Full Diagram
+### Full Diagram
 
 ```mermaid
 graph TD
@@ -1039,7 +954,7 @@ The full project critical path is:
 
 This path has an estimated total duration of 54 weeks.
 
-### Estimated Start & Finish
+## Estimated Start & Finish
 
 The following table shows the estimated Early/Late Start/Finish and the consequent slack available for each activity:
 
@@ -1116,10 +1031,105 @@ The following table shows the estimated Early/Late Start/Finish and the conseque
 | 6.7 | 52 | 53 | 52 | 53 | 0 |
 | 6.8 | 54 | 54 | 54 | 54 | 0 |
 
-### Gantt
+## Gantt
+
+To show a temporal schedule of the project a gantt chart is compiled:
 
 ```mermaid
-    gantt
+gantt
+    title Full Project Gantt Chart
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d-%b-%Y
+    %% Project start: 15 November 2025
+    %% Each week = 7 days
+
+    section Research
+    1.1 :2025-11-15, 2025-12-05
+    1.2 :2025-12-06, 2025-12-19
+    1.3 :2025-12-20, 2026-01-02
+    1.4 :2025-12-20, 2026-01-09
+    1.5 :2025-12-20, 2026-01-02
+    1.6 :2026-01-17, 2026-01-23
+    1.7 :2026-01-24, 2026-01-30
+
+    section Core
+    2.1.1 :2026-02-21, 2026-03-20
+    2.1.2 :2026-02-21, 2026-03-06
+    2.1.3 :2026-03-14, 2026-04-17
+    2.1.4 :2026-03-14, 2026-04-25
+    2.1.5 :2026-02-21, 2026-03-20
+    2.1.6 :2026-02-21, 2026-03-27
+    2.1.7 :2026-04-18, 2026-05-23
+    2.1.8 :2026-04-25, 2026-05-16
+    2.1.9 :2026-05-24, 2026-06-07
+
+    section Model
+    2.2.1 :2026-02-21, 2026-03-06
+    2.2.2 :2026-03-07, 2026-03-21
+    2.2.3 :2026-03-07, 2026-03-28
+    2.2.4 :2026-03-29, 2026-04-11
+    2.2.5 :2026-04-12, 2026-05-09
+    2.2.6 :2026-03-07, 2026-03-14
+    2.2.7 :2026-04-12, 2026-05-09
+    2.2.8 :2026-03-14, 2026-03-28
+    2.2.9 :2026-05-10, 2026-05-17
+
+    section Federation
+    2.3.1 :2026-03-14, 2026-03-28
+    2.3.2 :2026-02-21, 2026-03-20
+    2.3.3 :2026-03-21, 2026-03-28
+    2.3.4 :2026-03-14, 2026-04-17
+    2.3.5 :2026-04-12, 2026-05-09
+    2.3.6 :2026-03-14, 2026-04-25
+    2.3.7 :2026-05-10, 2026-05-31
+    2.3.8 :2026-06-14, 2026-06-21
+
+    section Storage
+    2.4.1 :2026-05-10, 2026-05-31
+    2.4.2 :2026-06-14, 2026-06-28
+    2.4.3 :2026-06-14, 2026-06-28
+    2.4.4 :2026-05-10, 2026-06-14
+    2.4.5 :2026-06-14, 2026-07-19
+    2.4.6 :2026-06-28, 2026-07-19
+    2.4.7 :2026-07-19, 2026-08-23
+    2.4.8 :2026-09-06, 2026-09-20
+
+    section Infrastructure
+    3.1 :2026-02-21, 2026-02-28
+    3.2 :2026-03-07, 2026-03-21
+    3.3 :2026-03-22, 2026-04-18
+    3.4 :2026-04-19, 2026-05-09
+    3.5 :2026-04-19, 2026-05-02
+    3.6 :2026-02-21, 2026-02-21
+    3.7 :2026-05-10, 2026-05-24
+    3.8 :2026-05-25, 2026-06-14
+
+    section FL
+    4.1 :2026-05-02, 2026-05-30
+    4.2 :2026-05-30, 2026-06-13
+    4.3 :2026-06-14, 2026-07-19
+    4.4 :2026-07-26, 2026-08-02
+    4.5 :2026-08-09, 2026-09-06
+    4.6 :2026-09-20, 2026-10-04
+
+    section UI
+    5.1 :2026-06-01, 2026-07-06
+    5.2 :2026-06-01, 2026-06-29
+    5.3 :2026-07-13, 2026-07-27
+    5.4 :2026-07-13, 2026-07-20
+    5.5 :2026-07-13, 2026-07-20
+    5.6 :2026-07-27, 2026-08-03
+    5.7 :2026-08-10, 2026-08-24
+
+    section QA & Doc
+    6.1 :2026-01-31, 2026-02-14
+    6.2 :2026-07-19, 2026-08-09
+    6.3 :2026-09-14, 2026-09-28
+    6.4 :2026-02-15, 2026-02-15
+    6.5 :2026-09-14, 2026-10-05
+    6.6 :2026-10-12, 2026-10-26
+    6.7 :2026-10-27, 2026-11-10
+    6.8 :2026-11-17, 2026-11-17
 ```
 
 ## Iteration Planning
